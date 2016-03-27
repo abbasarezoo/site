@@ -1,0 +1,30 @@
+.post-header {
+    position: relative;
+
+    height: 100vh;
+    padding: 4rem 1rem;
+
+    text-align: center;
+
+        @include mq(tablet) {
+            padding: 4rem 10rem 10rem;
+        }
+
+
+        @include mq(desktop) {
+            padding: 4rem 12.5% 10rem;
+        }
+
+}
+
+.post-meta {
+    @include font-size($ft-6);
+}
+
+.post-header--content {
+    @extend %center;
+}
+
+.post-title {
+	@include font-size($ft-1);
+}

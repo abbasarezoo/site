@@ -1,0 +1,56 @@
+// BREAKPOINTS
+
+$lrg-desktop: 1600px;
+$desktop: 1200px;
+$laptop: 960px;
+$tablet: 768px;
+$sml-tablet: 680px;
+$phone: 568px;
+$sml-phone: 320px;
+
+@mixin mq($point) {
+  @if $point == lrg-desktop {
+    @media (min-width: $lrg-desktop) { @content; }
+  }
+
+  @if $point == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+
+  @if $point == laptop {
+    @media (min-width: $laptop) { @content; }
+  }
+
+  @if $point == tablet-landscape {
+    @media (max-width: $laptop - 1px) and (orientation: landscape) { @content; }
+  }
+
+  @if $point == tablet {
+    @media (min-width: $tablet) { @content; }
+  }
+
+  @if $point == max-tablet {
+    @media (max-width: $tablet - 1px) { @content; }
+  }
+
+  @if $point == sml-tablet-landscape {
+    @media (min-width: $sml-tablet) and (orientation: landscape) { @content; }
+  }
+
+  @if $point == sml-tablet {
+    @media (min-width: $sml-tablet) { @content; }
+  }
+
+  @if $point == phone-landscape {
+    @media (min-device-width: $sml-phone) and (max-device-width: $sml-tablet) and (orientation: landscape) { @content; }
+  }
+
+  @if $point == phone {
+    @media (min-width: $phone) { @content; }
+  }
+
+  @if $point == sml-phone {
+    @media (min-width: $sml-phone)  { @content; }
+  }
+
+}

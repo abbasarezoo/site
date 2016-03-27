@@ -1,0 +1,175 @@
+// =================================================
+// HEADER
+// =================================================
+
+.pg-header--outer {
+    @extend %clearfix;
+
+    position: absolute;
+    top: 0;
+    z-index: 5000;
+ 
+    width: 100%;
+    padding: 1rem;
+
+        @include mq(tablet) {
+            position: fixed;
+        }
+        
+}
+
+.pg-header {
+    position: relative;
+    height: 8rem;
+    padding: 2rem 1rem;
+
+        @include mq(tablet) {
+            height: 5rem;
+            padding: 0;
+        }
+
+}
+
+.logo {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    float: left;
+
+        @include mq(tablet) {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        i, svg {
+            width: inherit;
+            height: inherit;
+        }
+
+        svg {
+            fill: $dark-grey;
+        }
+
+        @include hover-state {
+            
+            svg {
+                fill: $orange;
+            }
+
+        }
+
+}
+
+.toggle--main-nav {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    z-index: 10000;
+
+    display: block;
+    width: 3rem;
+    height: 2rem;
+
+        @include mq(tablet) {
+            top: 2.5rem;
+            right: 2rem;
+        }
+
+}
+
+.burger {
+
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 8px;
+
+    background-color: $dark-grey;
+
+    transition: all 0.25s;
+
+        &:last-of-type {
+            margin: 0;
+        }
+
+}
+
+.nav-open {
+    
+    .burger {
+        background-color: white;
+
+            &:nth-child(1) {
+                position: absolute;
+                top: 1rem;
+                right: 0;
+
+                @include rotate(45);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+            }
+
+            &:nth-child(3) {
+                position: absolute;
+                top: 1rem;
+                left: 0;
+
+                @include rotate(-45);
+            }
+
+
+    }
+
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    background-color: rgba($orange, 0.95);
+}
+
+.main-nav--list {
+    @extend %center;
+
+    text-align: center;
+    list-style-type: none;
+
+        li {
+            margin: 0 0 1rem;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+        }
+    
+        a {
+            @include heading($ft-3, $white);
+
+                @include mq(tablet) {
+                    @include font-size($ft-2);
+                }
+
+                @include mq(laptop) {
+                    
+                    &:hover {
+                        color: $black;
+                    }
+
+                }
+
+                @include mq(desktop) {
+                    @include font-size($ft-1);
+                }
+        }
+
+}

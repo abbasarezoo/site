@@ -1,0 +1,55 @@
+// FONT FAMILIES
+
+// FONT SIZES
+
+$ft-1: 6;
+$ft-2: 4.8;
+$ft-3: 3.6;
+$ft-4: 3.2;
+$ft-5: 2.8;
+$ft-6: 2;
+$ft-7: 1.8;
+$ft-8: 1.4;
+
+// FONT LEADING
+
+$hlh: 1.25;
+$blh: 1.5;
+
+// KERNING
+
+$kern: -0.025em;
+
+// BORDER
+
+$rad: 3px;
+
+// FONT DEFAULTS
+
+h1,h2,h3,h4,h5 {
+	font-family: "NeuzeitOffSoftRoundW01-_710333";
+ 	font-weight: normal;
+ 	letter-spacing: $kern;
+}
+
+// LAYOUT DIMENSIONS
+
+$max-content-width: 1200;
+$gutter-base: 60;
+
+$gut: ($gutter-base / $max-content-width) * 100%;
+
+$two-col-span-1: (100% - $gut) / 2;
+
+$three-col-span-1: (100% - ($gut*2)) / 3;
+$three-col-span-2: (($three-col-span-1 * 2) + $gut);
+
+$four-col-span-1: (100% - ($gut*3)) / 4;
+$four-col-span-2: $two-col-span-1;
+$four-col-span-3: ($four-col-span-1 * 3) + ($gut*2);
+
+
+$mob-after: 3rem;
+$dt-after: ($mob-after * 2);
+
+$vh: 100vh;

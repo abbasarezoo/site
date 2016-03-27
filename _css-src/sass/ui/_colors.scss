@@ -1,0 +1,22 @@
+// BRAND COLORS
+
+$black: #000;
+$white: #fff;
+
+$dark-grey: lighten($black, 20%);
+$mid-grey: lighten($black, 50%);
+$light-grey: lighten($black, 95%);
+$orange: #F37422;
+
+// COLOR WHEEL
+
+$dark-teal: #1aa9bc;
+$red: #f54123;
+$blue: #0098d8;
+$pink: #de3d83;
+$mustard: #e4bd0b;
+$green: #007500;
+
+$colors: $dark-teal, $red, $blue, $pink, $mustard, $green;
+
+$colors-length: length($colors);

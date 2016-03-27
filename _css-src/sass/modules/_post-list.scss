@@ -1,0 +1,129 @@
+// =================================================
+// POST LIST
+// =================================================
+
+.post-list {
+    list-style-type: none;
+
+    width: 100%;
+    padding: 0 1rem;
+
+        @include mq(tablet) {
+            padding: 0 10rem;
+        }
+        
+}
+
+.post-item {
+    display: block;
+
+    text-align: center;
+
+        @for $i from 1 through $colors-length {
+            
+            &:nth-of-type(#{$colors-length}n+#{$i}) {
+                
+                .post-link {
+                    background-color: nth($colors, $i);
+                }
+
+            }
+
+        }
+
+        @include mq(tablet) {
+            width: 50%;
+            float: left;
+        }
+
+        @include mq(desktop) {
+            width: 33.333%;
+        }
+
+}
+
+.post-link {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    padding: 3rem 2rem;
+
+    text-decoration: none;
+
+        @include mq(tablet) {
+            height: 30rem;
+            padding: 0;
+        }
+
+        @include hover-state {
+
+            h2 {
+                color: rgba($white, 0.15);
+            }
+
+            span {
+                opacity: 1;
+
+                @include font-size($ft-1);
+            }
+
+        }
+
+}
+
+.post-info {
+    position: relative;
+
+    width: 100%;
+    margin: 0 0 2rem;
+
+        @include mq(tablet) {
+            margin: 0;
+            padding: 0 2rem;
+
+            @include center;
+        }
+
+        h2 {
+            line-height: $hlh;
+            color: $white;
+            
+            transition: all 0.5s;
+
+            @include font-size($ft-5);
+        }
+
+        span {
+            @extend %center;
+
+            display: block;
+
+            opacity: 0;
+            transition: all 0.5s;
+
+            color: $white;
+
+            @include font-size(0);
+        }
+
+}
+
+.post-category {
+
+    @include mq(tablet) {
+        position: absolute;
+        left: 0;
+        bottom: 2rem;
+
+        width: 100%;
+    }
+
+    p {
+        text-align: center;
+        color: $white;
+
+        @include font-size($ft-7);
+    }
+
+}
