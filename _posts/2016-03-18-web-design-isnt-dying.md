@@ -1,17 +1,16 @@
 ---
 layout: post
 title:  "Web design isn't dead, but the term is dying"
+description: "A website isn't just pages of code and images rendered in the browser. It forms a small part of a larger digital strategy."
 date:   2016-03-18 20:29:49
 category: Thoughts
 ---
-
-The recent post by Sergio Nouvel announcing the death of web design was an interesting read. Using that sort of headline was always going to turn heads in the web community. Mashable re-printed the article which led to thorough responses from Smashing Magazine and Paul Boag. The article outlines many symptoms that will contribute to web design’s ‘imminent death’. I think the term web design is dying, but the skill is very much alive and has evolved into digital design.
 
 When I first started designing websites, you designed and built a website and that was that. There was little thought for SEO, performance and mobile user experience. Smartphones didn’t exist. Getting online with the phones that could access the web was excruciating. Responsive web design was a long way off and big social media was in its infancy. Advances in technology allow us to solve these challenges with digital strategy, of which digital design is a part of.
 
 ![Picture of post-it notes outlining the group of challenges that cannot be solved by design alone](http://www.vividcreative.com/wp-content/uploads/2015/07/uos-cs4-2.jpg)
 
-We now have a whole group of challenges that cannot be solved with design alone.
+*We now have a whole group of challenges that cannot be solved with design alone.*
 
 Grabbing a $50 template will get you a website, but code and images alone won’t get you over the line. Clients need the flexibility of a custom built digital product that suits their objectives, customers and content.
 
@@ -19,7 +18,7 @@ Designers obsess over tools and scripts to make their lives easier. Over the las
 
 ![Picture of popular task automation tools](http://www.vividcreative.com/wp-content/uploads/2015/07/automation-tools.jpg)
 
-Automation tools are great. But not the only answer.
+*Automation tools are great. But not the only answer.*
 
 Automation isn’t contributing to web design’s downfall. We limit how much automated tools encroach on our workflow. Telling your client the website looks and acts the way it does because you let the automated web builder do the hard work might not go down too well. Unless specified early in the project, clients want a personal touch. We also like clients to have an input into how what the digital product looks like. It’s a great way to keep the client involved and engaged with the project. Strategy, rather than automated tools, inform the visual look and functionality of digital products.
 

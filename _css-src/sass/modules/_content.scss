@@ -93,7 +93,7 @@
 
         line-height: $blh;
 
-        @include font-size($ft-5);
+        @include font-size($ft-6);
 
             code {
                 padding: 0.5rem;
@@ -140,14 +140,20 @@
         font-weight: normal;
     }
 
-    figure {
-        margin: 4rem 0;
-        padding: 1rem;
-        border-radius: $rad;
+    em {
+        display: block;
+        padding: 0 0 4rem;
+        
+        color: $orange;
 
-        line-height: $blh;
-
-        @include font-size($ft-7);
+        @include font-size($ft-6);
     }
+
+    p img {
+        padding: 4rem 0 0;
+
+        @extend %flex-img;
+    }
+
 
 }
