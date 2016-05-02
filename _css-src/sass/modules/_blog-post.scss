@@ -47,6 +47,8 @@
 .post-title {
     margin: 0 0 5rem;
 
+    color: lighten($black, 75%);
+
 	@include font-size($ft-3);
 
         @include mq(tablet) {

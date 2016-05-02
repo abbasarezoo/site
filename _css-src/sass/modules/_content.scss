@@ -55,7 +55,7 @@
         }
         
         @include mq(desktop) {
-            padding: 10rem 12.5%;
+            padding: 10rem 20%;
         }
 
 }
@@ -146,7 +146,7 @@
         
         color: $orange;
 
-        @include font-size($ft-6);
+        @include font-size($ft-7);
     }
 
     p img {
