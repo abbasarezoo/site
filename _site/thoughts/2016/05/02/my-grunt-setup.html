@@ -72,31 +72,31 @@
   <article class="post-content">
     <p>First of all if you have no prior knowledge of using Grunt then I highly recommend Chris Coyier’s article on 24ways that I used as a starting point. He explains it in a much better way than I probably could.</p>
 
-<p>My Grunt setup automates the following tasks:
-- Compiling Sass to CSS
-- Adding in vendor prefixes to CSS rules that still require them
-- Concatenating multiple Javascript files into a single minified file
-- Optimising images (SVG, PNG and JPG)
-- Copying compiling files to the relevant build directory
-- Refreshing the browser once changes have been made to specific files or directories</p>
+<h2 id="my-grunt-setup-automates-the-following-tasks">My Grunt setup automates the following tasks:</h2>
 
-<p>What this allows me to do:</p>
+<ul>
+  <li>Compiling Sass to CSS</li>
+  <li>Adding in vendor prefixes to CSS rules that still require them</li>
+  <li>Concatenating multiple Javascript files into a single minified file</li>
+  <li>Optimising images (SVG, PNG and JPG)</li>
+  <li>Copying compiled files to relevant build directories</li>
+  <li>Refreshing the browser once changes have been made to specific files or directories</li>
+</ul>
+
+<h2 id="what-this-allows-me-to-do">What this allows me to do:</h2>
 
 <p>I like to split my CSS down to granular level. This is personal preference, but I feel it makes the CSS a lot more flexible and easier to manage.</p>
 
-<p>For example the contents of my style.scss file could look something like this:</p>
+<p>For example the contents of my <code class="highlighter-rouge">style.scss</code> file could look something like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>
-<span class="k">@import</span> <span class="err">“</span><span class="n">ui</span><span class="p">/</span><span class="n">normalize</span><span class="err">’</span><span class="p">;</span>
-<span class="k">@import</span> <span class="err">“</span><span class="n">ui</span><span class="p">/</span><span class="n">breakpoints</span><span class="err">’</span><span class="p">;</span>
-<span class="k">@import</span> <span class="err">“</span><span class="n">ui</span><span class="p">/</span><span class="n">colors</span><span class="err">’</span><span class="p">;</span>
-<span class="k">@import</span> <span class="err">“</span><span class="n">ui</span><span class="p">/</span><span class="n">variables</span><span class="err">’</span><span class="p">;</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">@import</span> <span class="s1">"ui/normalize';
+@import "</span><span class="n">ui</span><span class="p">/</span><span class="n">breakpoints</span><span class="s2">';
+@import "ui/colors'</span><span class="p">;</span>
+<span class="k">@import</span> <span class="s1">"ui/variables';
+@import "</span><span class="n">plugins</span><span class="p">/</span><span class="n">slick</span><span class="s2">';
 
-<span class="k">@import</span> <span class="err">“</span><span class="n">plugins</span><span class="p">/</span><span class="n">slick</span><span class="err">’</span><span class="p">;</span>
-
-<span class="k">@import</span> <span class="err">“</span><span class="n">modules</span><span class="p">/</span><span class="n">repeatable-modules</span><span class="p">/</span><span class="n">social-panel</span><span class="err">’</span><span class="p">;</span>
-<span class="k">@import</span> <span class="err">“</span><span class="n">modules</span><span class="p">/</span><span class="n">footer-modules</span><span class="p">/</span><span class="n">signoff</span><span class="err">’</span><span class="p">;</span>
-
+@import "modules/repeatable-modules/social-panel'</span><span class="p">;</span>
+<span class="k">@import</span> <span class="err">"</span><span class="n">modules</span><span class="p">/</span><span class="n">footer-modules</span><span class="p">/</span><span class="n">signoff</span><span class="err">'</span><span class="p">;</span>
 </code></pre>
 </div>
 

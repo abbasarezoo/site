@@ -63,7 +63,7 @@
 .post-content {
 
     h1,h2,h3,h4,h5 {
-        margin: 0 0 1rem;
+        margin: 0 0 2rem;
 
         line-height: $hlh;
     }
@@ -73,48 +73,36 @@
     }
     
     h2 {
-        @include font-size($ft-2);
-    }
-
-    h3 {
-        @include font-size($ft-3);
-    }
-
-    h4 {
-        @include font-size($ft-4);
-    }
-
-    h5 {
         @include font-size($ft-5);
     }
 
+    h3 {
+        @include font-size($ft-5);
+    }
+
+    h4 {
+        @include font-size($ft-6);
+    }
+
+    h5 {
+        @include font-size($ft-6);
+    }
+
     p {
-        margin: 0 0 2rem;
+        margin: 0 0 3rem;
 
         line-height: $blh;
 
         @include font-size($ft-6);
-
-            code {
-                padding: 0.5rem;
-
-                background: $white;
-                border-radius: $rad;
-
-                color: $mid-grey;
-
-                @include font-size($ft-7);
-            }
-
     }
 
     ul,ol {
-        margin: 0 0 2rem 2rem;
+        margin: 0 0 3rem 2rem;
         padding: 0;
 
         line-height: $blh;
 
-        @include font-size($ft-5);
+        @include font-size($ft-6);
     }
 
     p,ul,ol {
@@ -131,6 +119,12 @@
 
                 }
 
+        }
+
+        code {
+            color: $orange;
+
+            @include font-size($ft-8);
         }
 
 
@@ -153,6 +147,10 @@
         padding: 4rem 0 0;
 
         @extend %flex-img;
+    }
+
+    pre {
+        margin: 0;
     }
 
 

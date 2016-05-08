@@ -6,8 +6,8 @@
 </description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 May 2016 08:55:26 +0100</pubDate>
-    <lastBuildDate>Sat, 07 May 2016 08:55:26 +0100</lastBuildDate>
+    <pubDate>Sun, 08 May 2016 11:35:28 +0100</pubDate>
+    <lastBuildDate>Sun, 08 May 2016 11:35:28 +0100</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -45,31 +45,31 @@
         <title>My front-end Grunt setup</title>
         <description>&lt;p&gt;First of all if you have no prior knowledge of using Grunt then I highly recommend Chris Coyier’s article on 24ways that I used as a starting point. He explains it in a much better way than I probably could.&lt;/p&gt;
 
-&lt;p&gt;My Grunt setup automates the following tasks:
-- Compiling Sass to CSS
-- Adding in vendor prefixes to CSS rules that still require them
-- Concatenating multiple Javascript files into a single minified file
-- Optimising images (SVG, PNG and JPG)
-- Copying compiling files to the relevant build directory
-- Refreshing the browser once changes have been made to specific files or directories&lt;/p&gt;
+&lt;h2 id=&quot;my-grunt-setup-automates-the-following-tasks&quot;&gt;My Grunt setup automates the following tasks:&lt;/h2&gt;
 
-&lt;p&gt;What this allows me to do:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compiling Sass to CSS&lt;/li&gt;
+  &lt;li&gt;Adding in vendor prefixes to CSS rules that still require them&lt;/li&gt;
+  &lt;li&gt;Concatenating multiple Javascript files into a single minified file&lt;/li&gt;
+  &lt;li&gt;Optimising images (SVG, PNG and JPG)&lt;/li&gt;
+  &lt;li&gt;Copying compiled files to relevant build directories&lt;/li&gt;
+  &lt;li&gt;Refreshing the browser once changes have been made to specific files or directories&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-this-allows-me-to-do&quot;&gt;What this allows me to do:&lt;/h2&gt;
 
 &lt;p&gt;I like to split my CSS down to granular level. This is personal preference, but I feel it makes the CSS a lot more flexible and easier to manage.&lt;/p&gt;
 
-&lt;p&gt;For example the contents of my style.scss file could look something like this:&lt;/p&gt;
+&lt;p&gt;For example the contents of my &lt;code class=&quot;highlighter-rouge&quot;&gt;style.scss&lt;/code&gt; file could look something like this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;normalize&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;breakpoints&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;variables&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;ui/normalize&#39;;
+@import &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ui&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;breakpoints&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&#39;;
+@import &quot;ui/colors&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;ui/variables&#39;;
+@import &quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slick&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&#39;;
 
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;slick&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;repeatable-modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;social-panel&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;“&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;footer-modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signoff&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
+@import &quot;modules/repeatable-modules/social-panel&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;@import&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;footer-modules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;signoff&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
