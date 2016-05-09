@@ -2,7 +2,7 @@
 layout: post
 title:  "My front-end Grunt setup"
 description: "Compile, concatenate and compress."
-date:   2016-05-02 08:29:49
+date:   2016-07-02 08:29:49
 category: Thoughts
 ---
 
@@ -21,5 +21,3 @@ My two main uses for using Grunt is to speed up the front-end build time and to 
 - Refreshing the browser once changes and additions have been made to specific files or directories
 
 ## The Gruntfile
-
-
