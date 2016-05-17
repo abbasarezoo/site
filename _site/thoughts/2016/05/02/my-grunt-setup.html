@@ -70,9 +70,30 @@
 		<span>&darr;</span>
 	</header>
   <article class="post-content">
-    <p>First of all if you have no prior knowledge of using Grunt then I highly recommend Chris Coyier’s article on 24ways that I used as a starting point. He explains it in a much better way than I probably could.</p>
+    <h2 id="why-we-use-grunt">Why we use Grunt</h2>
 
-<h2 id="this-grunt-setup-automates-the-following-tasks">This Grunt setup automates the following tasks:</h2>
+<p>We use Grunt to automate repetitive tasks such as Sass preprocessing, script minification and image compression. This allows us to write flexible, modular code which speeds up our front-end development time.</p>
+
+<h2 id="setting-up">Setting up</h2>
+
+<p>No third-party software is required for Grunt as it runs inside the command line. Grunt runs on node.js and runs in the command line. While this may seem daunting, no prior knowledge of node.js is required and Grunt only uses a small amount of commands. <a href="https://24ways.org/2013/grunt-is-not-weird-and-hard/">Chris Coyier’s article on Grunt is excellent</a>. This is where I started, so I would highly recommend reading this first.</p>
+
+<h3 id="using-our-boilerplate">Using our boilerplate</h3>
+
+<ul>
+  <li>Grab the files from our Github repo</li>
+  <li>Navigate to your directory in Terminal by manually typing in the path</li>
+  <li>You can also drag and drop the folder into Terminal</li>
+  <li>Don’t forget to start your command with <code class="highlighter-rouge">cd</code></li>
+</ul>
+
+<p>Your command should look  similar to this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd</span> /root/to/my/directory/
+</code></pre>
+</div>
+
+<h2 id="specifically-our-grunt-setup-automates-the-following-tasks">Specifically, our Grunt setup automates the following tasks:</h2>
 
 <ul>
   <li>Compiling Sass</li>
