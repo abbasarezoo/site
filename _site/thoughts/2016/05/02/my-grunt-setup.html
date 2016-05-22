@@ -72,40 +72,120 @@
   <article class="post-content">
     <h2 id="why-we-use-grunt">Why we use Grunt</h2>
 
-<p>We use Grunt to automate repetitive tasks such as Sass preprocessing, script minification and image compression. This allows us to write flexible, modular code which speeds up our front-end development time.</p>
+<p>We use Grunt to automate repetitive tasks such as CSS preprocessing and image compression. This dramatically speeds up our development time.</p>
 
-<h2 id="setting-up">Setting up</h2>
+<p>Not all projects are the same, so not all Grunt setups are be the same either. Our Grunt boilerplate is a foundation to create your own setup on a project-by-project basis.</p>
 
-<p>No third-party software is required for Grunt as it runs inside the command line. Grunt runs on node.js and runs in the command line. While this may seem daunting, no prior knowledge of node.js is required and Grunt only uses a small amount of commands. <a href="https://24ways.org/2013/grunt-is-not-weird-and-hard/">Chris Coyier’s article on Grunt is excellent</a>. This is where I started, so I would highly recommend reading this first.</p>
+<p>Note that the tasks in this boilerplate are primarily front-end orientated.</p>
 
-<h3 id="using-our-boilerplate">Using our boilerplate</h3>
+<h2 id="the-setup">The setup</h2>
+
+<h3 id="installing-grunt-for-the-first-time">Installing Grunt for the first time</h3>
+
+<p>Grunt runs on node.js and is a command line tool. If you’re on a Mac you’ll need to fire up Terminal. You may have to install node.js before if you don’t already have it.</p>
+
+<p>While this may seem daunting, no prior knowledge of node.js or the command line is required. Luckily, Grunt only uses a small amount of commands. <a href="https://24ways.org/2013/grunt-is-not-weird-and-hard/">Chris Coyier’s article on Grunt is excellent</a>. This is where I started, so I would highly recommend reading this first.</p>
+
+<p>One key thing to remember is that Grunt needs to be installed on a project by project basis.</p>
+
+<h3 id="fork-the-boilerplate">Fork the boilerplate</h3>
+
+<p>Our Grunt boilerplate is hosted on our public Github repository.</p>
 
 <ul>
-  <li>Grab the files from our Github repo</li>
-  <li>Navigate to your directory in Terminal by manually typing in the path</li>
-  <li>You can also drag and drop the folder into Terminal</li>
-  <li>Don’t forget to start your command with <code class="highlighter-rouge">cd</code></li>
+  <li>Fork the Github repository in a directory on your local machine</li>
+  <li>If you’re unfamiliar with Git then check out the Git intro article <strong>(add a link)</strong></li>
+  <li>Navigate to the directory in Terminal by manually typing in the path or by dragging and dropping the folder into the Terminal window</li>
+  <li>Don’t forget to start your command with <code class="highlighter-rouge">cd</code> for both methods</li>
 </ul>
 
-<p>Your command should look  similar to this:</p>
+<p>Your command should look similar to this:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd</span> /root/to/my/directory/
 </code></pre>
 </div>
+<p>Add a GIF/screencast?</p>
 
-<h2 id="specifically-our-grunt-setup-automates-the-following-tasks">Specifically, our Grunt setup automates the following tasks:</h2>
+<h3 id="the-file-structure">The file structure</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>project
+│   Gruntfile.js
+│   package.json    
+│   README.md
+└───_css-src
+    │   style.scss
+    ├───modules
+    │   │   _defaults.scss
+    │   │   _fonts.scss
+    ├───plugins
+    │   │   _normalize.scss
+    ├───ui
+    │   │   _breakpoints.scss
+    │   │   _general.scss
+    │   │   _ui.scss
+    │   │   _variables.scss
+└───_html-src
+└───_img-src
+└───_js-src
+└───wireframes
+└───www
+</code></pre>
+</div>
+
+<h3 id="npm-install">NPM install</h3>
+
+<p>In Terminal, run the command <code class="highlighter-rouge">npm install</code>. This command will install of the latest version of each Grunt task, or dependancy, locally.</p>
+
+<p>Once this task has completed we’re ready to configure our Gruntfile.</p>
+
+<h2 id="the-gruntfile">The Gruntfile</h2>
+
+<p>The Gruntfile is a configuration file where our tasks are setup.</p>
+
+<h3 id="tasks">Tasks:</h3>
+
+<p><code class="highlighter-rouge">grunt css</code></p>
 
 <ul>
-  <li>Compiling Sass</li>
-  <li>Adding in vendor prefixes to CSS rules that still require them</li>
-  <li>Minifying CSS</li>
-  <li>Combine multiple Javascript files into a single minified file</li>
-  <li>Optimising images</li>
-  <li>Copying files to relevant build directories</li>
-  <li>Refreshing the browser once changes and additions have been made to specific files or directories</li>
+  <li>Compile Sass inside <code class="highlighter-rouge">_css-src</code> to single CSS file</li>
+  <li>Add in vendor prefixes and minify CSS using posts</li>
+  <li>Set the directory where the resulting CSS file compiles into</li>
 </ul>
 
-<h2 id="npm-install">NPM install</h2>
+<p><code class="highlighter-rouge">grunt html</code></p>
+
+<ul>
+  <li>compile multiple HTML files inside <code class="highlighter-rouge">_html-src</code> into a single file</li>
+  <li>Copy the compiled HTML file to a specific directory</li>
+</ul>
+
+<p>`grunt js</p>
+
+<ul>
+  <li>Concatenate multiple Javascript files inside <code class="highlighter-rouge">_js-src</code> directory into a single minified file</li>
+  <li>Optimise images inside the <code class="highlighter-rouge">_img-src</code> directory</li>
+  <li>Copy compiled and optimised files to relevant build directories</li>
+  <li>Watch specific directories for changes and additions and run tasks automatically</li>
+  <li>Refresh the browser once changes and additions have been made to specific files or directories</li>
+</ul>
+
+<h3 id="examples">Examples:</h3>
+
+<p>In the below example we are compiling <code class="highlighter-rouge">style.css</code> from <code class="highlighter-rouge">style.scss</code> and compiling this to the <code class="highlighter-rouge">www/wp-content/themes/vivid/</code> directory.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">sass</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nl">options</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nl">sourceMap</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nx">dist</span><span class="err">:</span> <span class="p">{</span>
+        <span class="nl">files</span><span class="p">:</span> <span class="p">{</span>
+            <span class="err">‘</span><span class="nx">www</span><span class="o">/</span><span class="nx">wp</span><span class="o">-</span><span class="nx">content</span><span class="o">/</span><span class="nx">themes</span><span class="o">/</span><span class="nx">vivid</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">css</span><span class="err">’:</span> <span class="err">‘</span><span class="nx">_css</span><span class="o">-</span><span class="nx">src</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">scss</span><span class="err">’</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<p>To run this task simply run <code class="highlighter-rouge">grunt css</code> in the command line. We can automate further by running <code class="highlighter-rouge">grunt watch</code>. This task will watch the <code class="highlighter-rouge">_css-src</code> directory and run the <code class="highlighter-rouge">grunt css</code> each time any additions or changes have been made.</p>
 
   </article>
 </div>
