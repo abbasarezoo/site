@@ -134,58 +134,49 @@
 
 <h3 id="npm-install">NPM install</h3>
 
-<p>In Terminal, run the command <code class="highlighter-rouge">npm install</code>. This command will install of the latest version of each Grunt task, or dependancy, locally.</p>
+<p>In Terminal, run the command <code class="highlighter-rouge">$ npm install</code>. This command will install of the latest version of each Grunt task, or dependancy, locally.</p>
 
 <p>Once this task has completed we’re ready to configure our Gruntfile.</p>
 
-<h2 id="the-gruntfile">The Gruntfile</h2>
+<h3 id="the-gruntfile">The Gruntfile</h3>
 
-<p>The Gruntfile is a configuration file where our tasks are setup.</p>
+<p>The Gruntfile is a configuration file where our tasks are setup.  Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the dependencies and register each task at the bottom.</p>
 
-<h3 id="tasks">Tasks:</h3>
+<h2 id="running-tasks">Running tasks</h2>
 
-<p><code class="highlighter-rouge">grunt css</code></p>
+<h3 id="compile-css">Compile CSS</h3>
 
-<ul>
-  <li>Compile Sass inside <code class="highlighter-rouge">_css-src</code> to single CSS file</li>
-  <li>Add in vendor prefixes and minify CSS using posts</li>
-  <li>Set the directory where the resulting CSS file compiles into</li>
-</ul>
+<p>Task name: <strong><a href="https://github.com/sindresorhus/grunt-sass">grunt-sass</a></strong></p>
 
-<p><code class="highlighter-rouge">grunt html</code></p>
+<p>Command: <code class="highlighter-rouge">$ grunt css</code></p>
 
 <ul>
-  <li>compile multiple HTML files inside <code class="highlighter-rouge">_html-src</code> into a single file</li>
-  <li>Copy the compiled HTML file to a specific directory</li>
+  <li>Compiles Sass files inside the <strong>_css-src</strong> directory to CSS files</li>
+  <li>Adds in vendor prefixes and minify CSS using posts</li>
+  <li>Compiles the resulting CSS files to a specific directory</li>
 </ul>
 
-<p>`grunt js</p>
+<h3 id="compile-html">Compile HTML</h3>
+
+<p>Task name: <strong><a href="https://github.com/fatso83/grunt-codekit">grunt-codekit</a></strong></p>
+
+<p>Command: <code class="highlighter-rouge">$ grunt html</code></p>
 
 <ul>
-  <li>Concatenate multiple Javascript files inside <code class="highlighter-rouge">_js-src</code> directory into a single minified file</li>
-  <li>Optimise images inside the <code class="highlighter-rouge">_img-src</code> directory</li>
-  <li>Copy compiled and optimised files to relevant build directories</li>
-  <li>Watch specific directories for changes and additions and run tasks automatically</li>
-  <li>Refresh the browser once changes and additions have been made to specific files or directories</li>
+  <li>Compiles multiple HTML files inside the <strong>_html-src</strong> directory into <strong>.kit</strong> files</li>
+  <li>Converts <strong>.kit</strong> files to <strong>.html</strong> files and moves them to a specific directory</li>
 </ul>
 
-<h3 id="examples">Examples:</h3>
+<h3 id="concatenate-javascript">Concatenate Javascript</h3>
 
-<p>In the below example we are compiling <code class="highlighter-rouge">style.css</code> from <code class="highlighter-rouge">style.scss</code> and compiling this to the <code class="highlighter-rouge">www/wp-content/themes/vivid/</code> directory.</p>
+<p>Task name: <strong><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">sass</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">options</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nl">sourceMap</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nx">dist</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nl">files</span><span class="p">:</span> <span class="p">{</span>
-            <span class="err">‘</span><span class="nx">www</span><span class="o">/</span><span class="nx">wp</span><span class="o">-</span><span class="nx">content</span><span class="o">/</span><span class="nx">themes</span><span class="o">/</span><span class="nx">vivid</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">css</span><span class="err">’:</span> <span class="err">‘</span><span class="nx">_css</span><span class="o">-</span><span class="nx">src</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">scss</span><span class="err">’</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-<p>To run this task simply run <code class="highlighter-rouge">grunt css</code> in the command line. We can automate further by running <code class="highlighter-rouge">grunt watch</code>. This task will watch the <code class="highlighter-rouge">_css-src</code> directory and run the <code class="highlighter-rouge">grunt css</code> each time any additions or changes have been made.</p>
+<p>Command: <code class="highlighter-rouge">$ grunt js</code></p>
+
+<ul>
+  <li>Concatenates multiple Javascript files inside the <strong>_js-src</strong> directory into a single minified file</li>
+  <li>Moves the resulting JS file to a specific directory</li>
+</ul>
 
   </article>
 </div>

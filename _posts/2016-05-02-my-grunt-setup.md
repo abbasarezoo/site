@@ -68,49 +68,40 @@ project
 
 ### NPM install
 
-In Terminal, run the command `npm install`. This command will install of the latest version of each Grunt task, or dependancy, locally.
+In Terminal, run the command `$ npm install`. This command will install of the latest version of each Grunt task, or dependancy, locally.
 
 Once this task has completed we’re ready to configure our Gruntfile.
 
-## The Gruntfile
+### The Gruntfile
 
-The Gruntfile is a configuration file where our tasks are setup. 
+The Gruntfile is a configuration file where our tasks are setup.  Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the dependencies and register each task at the bottom.
 
-### Tasks:
+## Running tasks
 
-`grunt css`
+### Compile CSS
 
-- Compile Sass inside `_css-src` to single CSS file
-- Add in vendor prefixes and minify CSS using posts
-- Set the directory where the resulting CSS file compiles into
+Task name: **[grunt-sass](https://github.com/sindresorhus/grunt-sass)**
 
-`grunt html`
+Command: `$ grunt css`
 
-- compile multiple HTML files inside `_html-src` into a single file
-- Copy the compiled HTML file to a specific directory
+- Compiles Sass files inside the **_css-src** directory to CSS files
+- Adds in vendor prefixes and minify CSS using posts
+- Compiles the resulting CSS files to a specific directory
 
-`grunt js
+### Compile HTML
 
-- Concatenate multiple Javascript files inside `_js-src` directory into a single minified file
-- Optimise images inside the `_img-src` directory
-- Copy compiled and optimised files to relevant build directories
-- Watch specific directories for changes and additions and run tasks automatically
-- Refresh the browser once changes and additions have been made to specific files or directories
+Task name: **[grunt-codekit](https://github.com/fatso83/grunt-codekit)**
 
-### Examples:
+Command: `$ grunt html`
 
-In the below example we are compiling `style.css` from `style.scss` and compiling this to the `www/wp-content/themes/vivid/` directory. 
+- Compiles multiple HTML files inside the **_html-src** directory into **.kit** files
+- Converts **.kit** files to **.html** files and moves them to a specific directory
 
-```js
-sass: {
-    options: {
-        sourceMap: true
-    },
-    dist: {
-        files: {
-            ‘www/wp-content/themes/vivid/style.css’: ‘_css-src/style.scss’
-        }
-    }
-}
-```
-To run this task simply run `grunt css` in the command line. We can automate further by running `grunt watch`. This task will watch the `_css-src` directory and run the `grunt css` each time any additions or changes have been made. 
+### Concatenate Javascript
+
+Task name: **[grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)**
+
+Command: `$ grunt js`
+
+- Concatenates multiple Javascript files inside the **_js-src** directory into a single minified file
+- Moves the resulting JS file to a specific directory

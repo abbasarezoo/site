@@ -125,7 +125,7 @@
 
         code {
             display: inline-block;
-            padding: 0.5rem;
+            padding: 0.2rem 0;
 
             border: 1px solid lighten($black,90%);
             border-radius: $rad;
@@ -140,6 +140,7 @@
     }
 
     strong {
+        font-family: "NeuzeitOffSoftRoundW01-_710333";
         font-weight: normal;
     }
 
