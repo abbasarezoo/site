@@ -47,15 +47,26 @@
 			"file": "_css-src/sass/modules/_content.scss",
 			"settings":
 			{
-				"buffer_size": 2659,
+				"buffer_size": 2770,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/Users/abbasarezoo/Desktop/Git/mountain-tracks/Gruntfile.js",
+			"contents": "module.exports = function(grunt) {\n\n    grunt.initConfig({\n        pkg: grunt.file.readJSON('package.json'),\n\n        //=========================\n        // INDIVIDUAL TASKS\n        //=========================\n\n        // SASS AND COMPASS\n\nsass: {\n    options: {\n        sourceMap: false\n    },\n    dist: {\n        files: {\n            '_css-src/styles/style.css': '_css-src/sass/style.scss'\n        }\n    }\n},\n\n        postcss: {\n            options: {\n\n                map: {\n                    inline: false, // save all sourcemaps as separate files...\n                    annotation: '_css-src/styles/' // ...to the specified directory\n                },\n\n                processors: [\n                    require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes\n                    require('cssnano')() // minify the result\n                    ]\n                },\n\n                dist: {\n                    src: '_css-src/styles/*.css'\n                }\n\n        },\n\n        // JAVASCRIPT\n\n        uglify: {\n\n            compile: {\n                files: {\n                    'scripts/main.min.js': ['_js-src/uncompressed/*.js']\n                }\n            }\n\n        },\n\n        // IMAGES\n\n        imagemin: {\n            \n            optimise: {\n                files: [{\n                    expand: true,\n                    cwd: '_img-src/uncompressed',\n                    src: ['*.{png,jpg,gif,svg}'],\n                    dest: 'images'\n                }]\n            }\n\n        },\n\n        // COPY\n\n        copy: {\n\n            css: {\n                files: [\n                  {expand: true, flatten: true, src: ['_css-src/styles/*'], dest: 'css/', filter: 'isFile'}\n                ],\n            },\n\n            img: {\n                files: [\n                  {expand: true, flatten: true, src: ['_img-src/*'], dest: 'www/wp-content/themes/vivid/images/', filter: 'isFile'}\n                ],\n            },\n\n            js: {\n                files: [\n                  {expand: true, flatten: true, src: ['_js-src/*'], dest: 'www/wp-content/themes/vivid/scripts/', filter: 'isFile'}\n                ],\n            },\n\n        },\n\n        // JEKYLL\n\n        shell : {\n\n            jekyll_build : {\n                command : 'jekyll build'\n            },\n\n            jekyll_serve : {\n                command : 'jekyll serve'\n            }\n\n        },\n\n\n        //=========================\n        // WATCH TASK\n        //=========================\n\n        watch: {\n\n            html: {\n\n                files: ['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md'],\n                tasks: ['shell:jekyll_build'],\n                    options: {\n                        spawn: false,\n                        livereload:35729,\n                        event: ['added', 'changed']\n                    },\n\n            },\n\n            css: {\n\n                files: ['_css-src/sass/**/*.scss'],\n                tasks: ['css', 'shell:jekyll_build'],\n                    options: {\n                        spawn: false,\n                        livereload:35729,\n                        event: ['added', 'changed']\n                    },\n\n            },\n\n            js: {\n\n                files: ['_js-src/uncompressed/*.js'],\n                tasks: ['js', 'shell:jekyll_build'],\n                    options: {\n                        spawn: false,\n                        livereload:35729,\n                        event: ['added', 'changed']\n                    },\n                    \n            },\n\n            img: {\n\n                files: ['_img-src/uncompressed/**'],\n                tasks: ['img', 'shell:jekyll_build'],\n                    options: {\n                        spawn: false,\n                        livereload:35729,\n                        event: ['added', 'changed']\n                    },\n                    \n            },\n\n        },\n\n\n\n    });\n\n    grunt.loadNpmTasks('grunt-sass');\n    grunt.loadNpmTasks('grunt-contrib-watch');\n    grunt.loadNpmTasks('grunt-contrib-compass');\n    grunt.loadNpmTasks('grunt-contrib-copy');\n    grunt.loadNpmTasks('grunt-contrib-imagemin');\n    grunt.loadNpmTasks('grunt-contrib-uglify');\n    grunt.loadNpmTasks('grunt-notify');\n    grunt.loadNpmTasks('grunt-postcss');\n	grunt.loadNpmTasks('grunt-shell');\n\n    grunt.registerTask('css', ['sass', 'postcss', 'copy:css']);\n    grunt.registerTask('js', ['uglify', 'copy:js']);\n    grunt.registerTask('img', ['imagemin', 'copy:img']);\n    grunt.registerTask('move', ['copy']);\n\n\n};",
+			"file": "Gruntfile.js",
+			"file_size": 4650,
+			"file_write_time": 131035510850000000,
 			"settings":
 			{
-				"buffer_size": 3727,
+				"buffer_size": 4543,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_css-src/sass/ui/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 791,
 				"line_ending": "Unix"
 			}
 		},
@@ -141,12 +152,13 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/abbasarezoo/Desktop/Git/aadotcom/_css-src/sass",
-		"/Users/abbasarezoo/Desktop/Git/aadotcom/_css-src/sass/modules",
-		"/Users/abbasarezoo/Desktop/Git/aadotcom/_css-src/sass/ui"
+		"/Users/abbasarezoo/Sites/aadotcom/_css-src/sass",
+		"/Users/abbasarezoo/Sites/aadotcom/_css-src/sass/ui"
 	],
 	"file_history":
 	[
+		"/Users/abbasarezoo/Sites/aadotcom/package.json",
+		"/Users/abbasarezoo/Desktop/Git/mountain-tracks/Gruntfile.js",
 		"/Users/abbasarezoo/Desktop/Git/mountain-tracks/www/sites/default/settings.php",
 		"/Users/abbasarezoo/Desktop/Git/mountain-tracks/www/.htaccess",
 		"/Users/abbasarezoo/Desktop/Git/aadotcom/_posts/2016-05-02-my-grunt-setup.md",
@@ -272,9 +284,7 @@
 		"/Users/abbasarezoo/Desktop/Git/Front-end Starter Pack/_js-src/uncompressed/functions.js",
 		"/Users/abbasarezoo/Desktop/Git/shorts-fs/wp-content/themes/shorts/style.css",
 		"/Users/abbasarezoo/Desktop/Git/shorts-fs/wp-content/themes/shorts/page-services-landing.php",
-		"/Users/abbasarezoo/Desktop/webfontkit-20151103-104322/stylesheet.css",
-		"/Users/abbasarezoo/Desktop/Git/shorts-fs/wp-config.php",
-		"/Users/abbasarezoo/Desktop/shortsfs_wordpress.sql"
+		"/Users/abbasarezoo/Desktop/webfontkit-20151103-104322/stylesheet.css"
 	],
 	"find":
 	{
@@ -595,7 +605,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -604,15 +614,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2659,
+						"buffer_size": 2770,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2292,
-								2292
+								1379,
+								1379
 							]
 						],
 						"settings":
@@ -675,109 +685,255 @@
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
 							],
 							"syntax": "Packages/SCSS/SCSS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1696.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/abbasarezoo/Desktop/Git/mountain-tracks/Gruntfile.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3727,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								501,
-								235
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content"
-							],
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1516.0,
+						"translation.y": 954.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
+					"buffer": 1,
+					"file": "Gruntfile.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								240
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
 					"buffer": 2,
+					"file": "_css-src/sass/ui/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								119,
+								119
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "_css-src/sass/ui/_colors.scss",
 					"semi_transient": false,
 					"settings":
@@ -789,8 +945,8 @@
 						"selection":
 						[
 							[
-								109,
-								109
+								6,
+								6
 							]
 						],
 						"settings":
@@ -854,13 +1010,72 @@
 								"bh_square_close",
 								"bh_square_content"
 							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
 							"syntax": "Packages/SCSS/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

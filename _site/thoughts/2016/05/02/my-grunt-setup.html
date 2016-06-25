@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>My Grunt boilerplate</title>
-  <meta name="description" content="Front-end automation">
+  <title>Your first front-end Grunt project</title>
+  <meta name="description" content="A beginners guide to setting up a Grunt based project using a basic boilerplate with a few simple tasks">
 
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="http://www.abbasarezoo.com/thoughts/2016/05/02/my-grunt-setup.html">
@@ -64,51 +64,48 @@
   <header class="post-header">
 	  	 <p class="post-meta">02.05.16</p>
 	  	<div class="post-header--content">
-	    	<h1 class="post-title">My Grunt boilerplate</h1>
-	    	<h2 class="post-desc">Front-end automation</h2>
+	    	<h1 class="post-title">Your first front-end Grunt project</h1>
+	    	<h2 class="post-desc">A beginners guide to setting up a Grunt based project using a basic boilerplate with a few simple tasks</h2>
 		</div>
 		<span>&darr;</span>
 	</header>
   <article class="post-content">
-    <h2 id="why-we-use-grunt">Why we use Grunt</h2>
+    <h2 id="what-you-need">What you need</h2>
 
-<p>We use Grunt to automate repetitive tasks such as CSS preprocessing and image compression. This dramatically speeds up our development time.</p>
+<p>For this walkthrough you’ll need a code editor and a command line application. For the purposes of this article I’ll be using Terminal (Mac).</p>
 
-<p>Not all projects are the same, so not all Grunt setups are be the same either. Our Grunt boilerplate is a foundation to create your own setup on a project-by-project basis.</p>
+<p>You should have a working knowledge of front-end development. It is also assumed you are familiar with Git and are comfortable pulling repos to your local environment.</p>
 
-<p>Note that the tasks in this boilerplate are primarily front-end orientated.</p>
+<h2 id="why-i-use-grunt">Why I use Grunt</h2>
 
-<h2 id="the-setup">The setup</h2>
+<p>Grunt is known as a ‘task-runner’ and has thousands of plugins which can be utilised to automate almost any task. I use Grunt to automate repetitive tasks such as code compilation and image compression.</p>
 
-<h3 id="installing-grunt-for-the-first-time">Installing Grunt for the first time</h3>
+<p>My choice to run Grunt is based on nothing other than it was the first one I tried. It was easy enough to work with, so it seemed wise to stick with it. There are other task runners available that might be more suitable for your needs.</p>
 
-<p>Grunt runs on node.js and is a command line tool. If you’re on a Mac you’ll need to fire up Terminal. You may have to install node.js before if you don’t already have it.</p>
+<p>Ultimately, the payoff of using any task runner is that it will increase the speed of your development dramatically.</p>
 
-<p>While this may seem daunting, no prior knowledge of node.js or the command line is required. Luckily, Grunt only uses a small amount of commands. <a href="https://24ways.org/2013/grunt-is-not-weird-and-hard/">Chris Coyier’s article on Grunt is excellent</a>. This is where I started, so I would highly recommend reading this first.</p>
+<p>Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.</p>
 
-<p>One key thing to remember is that Grunt needs to be installed on a project by project basis.</p>
+<h3 id="setting-up">Setting up</h3>
 
-<h3 id="fork-the-boilerplate">Fork the boilerplate</h3>
-
-<p>Our Grunt boilerplate is hosted on our public Github repository.</p>
+<p>If you’ve never used Grunt before you will need to:</p>
 
 <ul>
-  <li>Fork the Github repository in a directory on your local machine</li>
-  <li>If you’re unfamiliar with Git then check out the Git intro article <strong>(add a link)</strong></li>
-  <li>Navigate to the directory in Terminal by manually typing in the path or by dragging and dropping the folder into the Terminal window</li>
-  <li>Don’t forget to start your command with <code class="highlighter-rouge">cd</code> for both methods</li>
+  <li>Install <a href="https://nodejs.org/en/">Node.js</a></li>
+  <li>Install <a href="http://gruntjs.com/getting-started">Grunt’s command line interface</a></li>
 </ul>
 
-<p>Your command should look similar to this:</p>
+<p>One key thing to note is that Grunt is a command line tool. The good news is no prior knowledge of the command line is required. As Grunt only uses a small amount of commands it’s a nice introduction to the command line for beginners.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd</span> /root/to/my/directory/
-</code></pre>
-</div>
-<p>Add a GIF/screencast?</p>
+<p>Now you can fork the starter pack from our Github repo and start automating.</p>
 
-<h3 id="the-file-structure">The file structure</h3>
+<h2 id="the-boilerplate">The boilerplate</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>project
+<h3 id="file-structure">File structure</h3>
+
+<p>Below is an example of what the boilerplate file structure looks like. This setup is simply personal preference. There is no magical methodology behind it. The key idea is that there should be no un-compiled files inside our build directory <code class="highlighter-rouge">/www</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>my_project_name
 │   Gruntfile.js
 │   package.json    
 │   README.md
@@ -127,24 +124,87 @@
 └───_html-src
 └───_img-src
 └───_js-src
-└───wireframes
 └───www
 </code></pre>
 </div>
+<p>Don’t forget to edit the Gruntfile if you’re going to use your own structure and naming conventions.</p>
 
-<h3 id="npm-install">NPM install</h3>
+<h3 id="getting-some-plugins">Getting some plugins</h3>
 
-<p>In Terminal, run the command <code class="highlighter-rouge">$ npm install</code>. This command will install of the latest version of each Grunt task, or dependancy, locally.</p>
+<p>All of the plugins Grunt uses are stored in a directory called <code class="highlighter-rouge">/node_modules</code>.</p>
 
-<p>Once this task has completed we’re ready to configure our Gruntfile.</p>
+<p>You may have noticed there is no directory in the repo you forked. On an ongoing project a <code class="highlighter-rouge">/node_modules</code> will include thousands of files, which you can store remotely if that’s how you like to work. But it’s not detrimental to the project if you don’t do this.</p>
 
-<h3 id="the-gruntfile">The Gruntfile</h3>
+<p>We can run a single command in Terminal <code class="highlighter-rouge">npm-install</code> which downloads all of the plugins we need to our local environment. Be sure to add <code class="highlighter-rouge">node_modules</code> to .gitignore to make sure you don’t push to your remote repo.</p>
 
-<p>The Gruntfile is a configuration file where our tasks are setup.  Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the dependencies and register each task at the bottom.</p>
+<p>Once we have the plugins we’re ready to look at our Gruntfile.</p>
 
-<h2 id="running-tasks">Running tasks</h2>
+<h3 id="configuring-the-gruntfile">Configuring the Gruntfile</h3>
 
-<h3 id="compile-css">Compile CSS</h3>
+<p>You will notice at the root of the project directory a file named <code class="highlighter-rouge">Gruntfile.js</code>. This is a configuration file where our tasks are setup. The file should always be named <code class="highlighter-rouge">Gruntfile.js</code> otherwise Grunt will error when your try to run a task.</p>
+
+<p>Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the dependencies and register each task at the bottom.</p>
+
+<h4 id="exploring-and-editing-the-gruntfile">Exploring and editing the Gruntfile</h4>
+
+<p>All the tasks are setup to run out of the box albeit for some slight tweaking to the file itself. Such as changing the directories to which code is compiled to.</p>
+
+<p>If you’re unfamiliar with Javascript you may be overawed by the code inside the Gruntfile. However, because of the simplistic nature of how Grunt tasks are configured, a newbie should be able to navigate and edit the file without too much trouble.</p>
+
+<h4 id="example-tasks">Example tasks</h4>
+
+<p>Most tasks share similar characteristics with slight variations depending on how the code was written by the developer who built the plugin.</p>
+
+<p>Each task tends to have it’s own Github repo where you can explore how the task works and is setup - there are some links below to the repo of each task included in this pack. I would recommending taking a look at the README of each plugin to get a feel for each one should be used.</p>
+
+<p>Familiarising yourself with the structure of tasks, running tasks, editing tasks, breaking tasks and finding out how you broke them will serve you well in your future task automation.</p>
+
+<h5 id="heres-an-image-compression-task">Here’s an image compression task:</h5>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">imagemin</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nl">optimise</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nl">files</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="na">expand</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="na">cwd</span><span class="p">:</span> <span class="s1">'_img-src'</span><span class="p">,</span>
+            <span class="na">src</span><span class="p">:</span> <span class="p">[</span><span class="s1">'*.{png,jpg,gif,svg}'</span><span class="p">],</span>
+            <span class="na">dest</span><span class="p">:</span> <span class="s1">'www/images'</span>
+        <span class="p">}]</span>
+     <span class="p">}</span>
+<span class="p">},</span>
+</code></pre>
+</div>
+<ul>
+  <li>This task as one target: <code class="highlighter-rouge">optimise</code></li>
+  <li>This looks through the current working directory (<code class="highlighter-rouge">cwd</code>), where our uncompressed images are saved.</li>
+  <li>It then looks for source files (<code class="highlighter-rouge">src</code>) to optimise. Note in this example we’re using a wildcard (<code class="highlighter-rouge">*</code>) to tell the plugin to target all files in our current working directory with the file extensions of .png, .jpg, .gif and .svg</li>
+  <li>It then makes new versions of all the optimised images in the <code class="highlighter-rouge">www/images</code> directory</li>
+  <li>If you’ve changed your directory setup you will need to change the location of the <code class="highlighter-rouge">cwd</code> and <code class="highlighter-rouge">dest</code> accordingly</li>
+</ul>
+
+<h5 id="another-task-example-with-a-different-structure-this-time-compiling-sass">Another task example with a different structure, this time compiling Sass:</h5>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">sass</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nl">options</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nl">sourceMap</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nx">dist</span><span class="err">:</span> <span class="p">{</span>
+        <span class="nl">files</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">'_css-src/styles/style.css'</span><span class="err">:</span> <span class="s1">'_css-src/sass/style.scss'</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">},</span>
+</code></pre>
+</div>
+<ul>
+  <li>This task is setup a little differently, with two targets <code class="highlighter-rouge">options</code> and <code class="highlighter-rouge">dist</code></li>
+  <li>The <code class="highlighter-rouge">options</code> target creates a source map for the compiled CSS file (really handy). This option is currently set to <code class="highlighter-rouge">false</code> however, which means no source map will be generated</li>
+  <li>The second target of this task dictates where the compiled CSS will be generated to and from directory it is created from</li>
+  <li>The first part shows which directory the final CSS goes. The second part shows the directory where the separate Sass files are located</li>
+</ul>
+
+<h3 id="tasks-included-with-this-boilerplate">Tasks included with this boilerplate</h3>
+
+<h4 id="compile-css">Compile CSS</h4>
 
 <p>Task name: <strong><a href="https://github.com/sindresorhus/grunt-sass">grunt-sass</a></strong></p>
 
@@ -156,7 +216,7 @@
   <li>Compiles the resulting CSS files to a specific directory</li>
 </ul>
 
-<h3 id="compile-html">Compile HTML</h3>
+<h4 id="compile-html">Compile HTML</h4>
 
 <p>Task name: <strong><a href="https://github.com/fatso83/grunt-codekit">grunt-codekit</a></strong></p>
 
@@ -167,7 +227,7 @@
   <li>Converts <strong>.kit</strong> files to <strong>.html</strong> files and moves them to a specific directory</li>
 </ul>
 
-<h3 id="concatenate-javascript">Concatenate Javascript</h3>
+<h4 id="concatenate-javascript">Concatenate Javascript</h4>
 
 <p>Task name: <strong><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a></strong></p>
 
@@ -176,6 +236,29 @@
 <ul>
   <li>Concatenates multiple Javascript files inside the <strong>_js-src</strong> directory into a single minified file</li>
   <li>Moves the resulting JS file to a specific directory</li>
+</ul>
+
+<h4 id="optimise-images">Optimise images</h4>
+
+<p>Task name: <strong><a href="https://github.com/gruntjs/grunt-contrib-imagemin">grunt-contrib-imagemin</a></strong></p>
+
+<p>Command <code class="highlighter-rouge">$ grunt img</code></p>
+
+<ul>
+  <li>Optimises all images inside the <strong>_img-src</strong> directory</li>
+  <li>Moves the optimised images to a specific directory</li>
+</ul>
+
+<h2 id="files-hosted-on-github">Files hosted on Github</h2>
+
+<h3 id="handy-links">Handy links</h3>
+
+<ul>
+  <li>Official Grunt website</li>
+  <li>Node.js website</li>
+  <li>Terminal for Mac</li>
+  <li>Terminal for OSX</li>
+  <li><a href="https://24ways.org/2013/grunt-is-not-weird-and-hard/">Chris Coyier’s article on Grunt is excellent</a>. This is where I started, so I would highly recommend reading this first.</li>
 </ul>
 
   </article>
