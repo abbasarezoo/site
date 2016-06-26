@@ -3,20 +3,4 @@
 </footer>
 <script src="//localhost:35729/livereload.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-$(".toggle--main-nav").click(function(e){
-    $(".main-nav").fadeToggle();
-    if($(this).hasClass("nav-open")){
-      $(this).removeClass("nav-open");
-    }
-    else {
-      $(this).addClass("nav-open");
-    }
-    e.preventDefault();
-});
-
-$(".nav-open").click(function(e){
-  $(this).parent().hide();
-  e.preventDefault();
-});
-</script>
+<script src="{{ "/scripts/main.min.js" | prepend: site.baseurl }}"></script>

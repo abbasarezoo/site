@@ -69,7 +69,7 @@
     <li class="post-item">
       <a class="post-link" href="/thoughts/2016/05/02/my-grunt-setup.html">
         <div class="post-info">
-          <h2>Your first front-end Grunt project</h2>
+          <h2>Using Grunt with a front-end project for the first time</h2>
           <span>&rarr;</span>
         </div>
         <div class="post-category">
@@ -99,23 +99,7 @@
 </footer>
 <script src="//localhost:35729/livereload.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-$(".toggle--main-nav").click(function(e){
-    $(".main-nav").fadeToggle();
-    if($(this).hasClass("nav-open")){
-      $(this).removeClass("nav-open");
-    }
-    else {
-      $(this).addClass("nav-open");
-    }
-    e.preventDefault();
-});
-
-$(".nav-open").click(function(e){
-  $(this).parent().hide();
-  e.preventDefault();
-});
-</script>
+<script src="/scripts/main.min.js"></script>
 
 
   </body>

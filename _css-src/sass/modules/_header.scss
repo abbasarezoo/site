@@ -48,6 +48,7 @@
 
         svg {
             fill: $dark-grey;
+            transition: all 0.25s;
         }
 
         @include hover-state {
@@ -120,6 +121,28 @@
             }
 
 
+    }
+
+}
+
+.floaty {
+    
+    .logo svg {
+        fill: $orange;
+        transition: all 0.25s;
+    }
+
+    .burger {
+        background-color: $orange;
+        transition: all 0.25s;
+    }
+
+    .nav-open {
+
+        .burger {
+            background-color: white;
+        }
+        
     }
 
 }

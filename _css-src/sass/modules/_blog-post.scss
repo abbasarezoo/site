@@ -47,7 +47,7 @@
 .post-title {
     margin: 0 0 5rem;
 
-    color: lighten($black, 75%);
+    color: $orange;
 
 	@include font-size($ft-3);
 

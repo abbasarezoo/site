@@ -1,24 +1,22 @@
 ---
 layout: post
-title:  "Your first front-end Grunt project"
-description: "A beginners guide to setting up a Grunt based project using a basic boilerplate with a few simple tasks"
+title:  "Using Grunt with a front-end project for the first time"
+description: "This is beginner's guide to setting up a project using the popular task runner and a simple directory setup"
 date:   2016-05-02 08:29:49
 category: Thoughts
 ---
 
-## What you need
+## 	Before we start
 
-For this walkthrough you'll need a code editor and a command line application. For the purposes of this article I'll be using Terminal (Mac).
+For this guide you'll need a code editor and a command line application. For the purposes of this article I'll be using Terminal (Mac).
 
-You should have a working knowledge of front-end development. It is also assumed you are familiar with Git and are comfortable pulling repos to your local environment.
+Having a working knowledge of front-end development will help. It is also assumed you are familiar with Git and have used Github before.
 
-## Why I use Grunt
+## What is Grunt?
 
-Grunt is known as a 'task-runner' and has thousands of plugins which can be utilised to automate almost any task. I use Grunt to automate repetitive tasks such as code compilation and image compression. 
+Grunt is a 'task runner' which has thousands of plugins that can be used to automate almost any task. I use Grunt mainly for code compilation and image compression. 
 
-My choice to run Grunt is based on nothing other than it was the first one I tried. It was easy enough to work with, so it seemed wise to stick with it. There are other task runners available that might be more suitable for your needs.
-
-Ultimately, the payoff of using any task runner is that it will increase the speed of your development dramatically.
+There are other task runners available that may serve your needs better but I won't be getting into the pro's and con's of the alternatives in this guide. The fact is using any task runner will increase the speed of your development dramatically.
 
 Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.
 
@@ -29,15 +27,15 @@ If you've never used Grunt before you will need to:
 - Install [Node.js](https://nodejs.org/en/)
 - Install [Grunt's command line interface](http://gruntjs.com/getting-started)
 
-One key thing to note is that Grunt is a command line tool. The good news is no prior knowledge of the command line is required. As Grunt only uses a small amount of commands it's a nice introduction to the command line for beginners.
+Grunt is a command line tool that uses a only small amount of commands. If you're unfamiliar using the command line I reckon Grunt is a nice introduction for beginners.
 
-Now you can fork the starter pack from our Github repo and start automating.
+Once you're all setup we can fork the boilerplate from our Github repo and start automating.
 
 ## The boilerplate
 
 ### File structure
 
-Below is an example of what the boilerplate file structure looks like. This setup is simply personal preference. There is no magical methodology behind it. The key idea is that there should be no un-compiled files inside our build directory `/www`.
+Below is an example of what my boilerplate file structure looks like. There is no magical methodology behind it. The key idea is that there should be no un-compiled files inside our build directory `/www`.
 
 ```
 my_project_name
@@ -61,11 +59,11 @@ my_project_name
 └───_js-src
 └───www
 ```
-Don't forget to edit the Gruntfile if you're going to use your own structure and naming conventions.
+If you're going to use your own structure and naming conventions, then you will need to edit the Gruntfile accordingly.
 
 ### Getting some plugins
 
-All of the plugins Grunt uses are stored in a directory called `/node_modules`. 
+All of the plugins that Grunt will use are stored in the `/node_modules` directory. 
 
 You may have noticed there is no directory in the repo you forked. On an ongoing project a `/node_modules` will include thousands of files, which you can store remotely if that's how you like to work. But it's not detrimental to the project if you don't do this.
 
@@ -75,17 +73,52 @@ Once we have the plugins we’re ready to look at our Gruntfile.
 
 ### Configuring the Gruntfile
 
-You will notice at the root of the project directory a file named `Gruntfile.js`. This is a configuration file where our tasks are setup. The file should always be named `Gruntfile.js` otherwise Grunt will error when your try to run a task. 
+Each Grunt project has a Gruntfile. This is a configuration file where our tasks are setup. The file should and will always be named `Gruntfile.js` otherwise Grunt will error when your try to run a task. 
 
-Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the dependencies and register each task at the bottom.
+Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the plugins and register each task at the bottom.
+
+```js
+module.exports = function(grunt) {
+
+// TASK CONFIGURATION
+
+grunt.initConfig({
+  pkg: grunt.file.readJSON('package.son'),
+
+    sass: {
+
+      options: {
+        sourceMap: false
+      },
+
+      dist: {
+        files: {
+          '_css-src/styles/style.css': '_css-src/sass/style.scss'
+        }
+      }
+
+    },
+
+});
+
+// LOAD EACH PLUGIN
+
+grunt.loadNpmTasks('grunt-sass');
+
+// REGISTER EACH TASK
+
+grunt.registerTask('default');
+
+};
+```
 
 #### Exploring and editing the Gruntfile
 
-All the tasks are setup to run out of the box albeit for some slight tweaking to the file itself. Such as changing the directories to which code is compiled to. 
+All the tasks are setup to run out of the box, albeit for some slight tweaking to the file itself such as changing file directories.
 
 If you're unfamiliar with Javascript you may be overawed by the code inside the Gruntfile. However, because of the simplistic nature of how Grunt tasks are configured, a newbie should be able to navigate and edit the file without too much trouble.
 
-#### Example tasks
+#### Interpreting a task
 
 Most tasks share similar characteristics with slight variations depending on how the code was written by the developer who built the plugin. 
 
