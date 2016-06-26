@@ -55,7 +55,7 @@
         }
         
         @include mq(desktop) {
-            padding: 10rem 20%;
+            padding: 10rem 22.5%;
         }
 
 }
@@ -108,7 +108,7 @@
 
             a {
                 color: $dark-grey;
-                text-decoration: underline;
+                //text-decoration: none;
 
                     @include mq(laptop) {
                         
@@ -128,7 +128,7 @@
                 border-radius: $rad;
                 background-color: $white;
 
-                color: $dark-grey;
+                color: teal;
 
                 @include font-size($ft-7);
             }
@@ -142,12 +142,20 @@
     }
 
     em {
-        display: block;
-        padding: 0 0 4rem;
-        
-        color: $orange;
+        color: $dark-grey;
+        font-style: normal;
 
-        @include font-size($ft-7);
+            a {
+
+                @include mq(laptop) {
+                        
+                    &:hover {
+                        color: $orange;
+                    }
+
+                }
+
+            }
     }
 
     p img {

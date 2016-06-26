@@ -96,6 +96,10 @@
 }
 
 .nav-open {
+
+    .logo svg {
+        fill: $white;
+    }
     
     .burger {
         background-color: white;
@@ -142,7 +146,7 @@
         .burger {
             background-color: white;
         }
-        
+
     }
 
 }

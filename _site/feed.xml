@@ -6,25 +6,25 @@
 </description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jun 2016 12:50:09 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Jun 2016 12:50:09 +0100</lastBuildDate>
+    <pubDate>Sun, 26 Jun 2016 20:43:22 +0100</pubDate>
+    <lastBuildDate>Sun, 26 Jun 2016 20:43:22 +0100</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
         <title>Using Grunt with a front-end project for the first time</title>
         <description>&lt;h2 id=&quot;before-we-start&quot;&gt;Before we start&lt;/h2&gt;
 
-&lt;p&gt;For this guide you’ll need a code editor and a command line application. For the purposes of this article I’ll be using Terminal (Mac).&lt;/p&gt;
+&lt;p&gt;For this guide you’ll need a code editor and a command line application. For the purposes of this guide I’ll be using Terminal (Mac).&lt;/p&gt;
 
 &lt;p&gt;Having a working knowledge of front-end development will help. It is also assumed you are familiar with Git and have used Github before.&lt;/p&gt;
 
+&lt;p&gt;Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.&lt;/p&gt;
+
 &lt;h2 id=&quot;what-is-grunt&quot;&gt;What is Grunt?&lt;/h2&gt;
 
-&lt;p&gt;Grunt is a ‘task runner’ which has thousands of plugins that can be used to automate almost any task. I use Grunt mainly for code compilation and image compression.&lt;/p&gt;
+&lt;p&gt;Grunt is a ‘task runner’ which has thousands of plugins that can be used to automate almost any task. Whilst there are other task runners available that may serve your needs better, I won’t be getting into the pro’s and con’s of the alternatives in this guide.&lt;/p&gt;
 
-&lt;p&gt;There are other task runners available that may serve your needs better but I won’t be getting into the pro’s and con’s of the alternatives in this guide. The fact is using any task runner will increase the speed of your development dramatically.&lt;/p&gt;
-
-&lt;p&gt;Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.&lt;/p&gt;
+&lt;p&gt;The fact is: using any task runner will dramatically increase the speed of your development.&lt;/p&gt;
 
 &lt;h3 id=&quot;setting-up&quot;&gt;Setting up&lt;/h3&gt;
 
@@ -35,15 +35,15 @@
   &lt;li&gt;Install &lt;a href=&quot;http://gruntjs.com/getting-started&quot;&gt;Grunt’s command line interface&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line I reckon Grunt is a nice introduction for beginners.&lt;/p&gt;
+&lt;p&gt;Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners.&lt;/p&gt;
 
-&lt;p&gt;Once you’re all setup we can fork the boilerplate from our Github repo and start automating.&lt;/p&gt;
+&lt;p&gt;Once you’re all setup we can fork the boilerplate from our Github repo and start getting to know Grunt.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-boilerplate&quot;&gt;The boilerplate&lt;/h2&gt;
 
 &lt;h3 id=&quot;file-structure&quot;&gt;File structure&lt;/h3&gt;
 
-&lt;p&gt;Below is an example of what my boilerplate file structure looks like. There is no magical methodology behind it. The key idea is that there should be no un-compiled files inside our build directory &lt;code class=&quot;highlighter-rouge&quot;&gt;/www&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Below is an example of what my boilerplate file structure looks like. There is no magical methodology behind it. The idea is that there should be no uncompiled or uncompressed files inside our build directory: &lt;em&gt;www&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;my_project_name
 │   Gruntfile.js
@@ -67,21 +67,23 @@
 └───www
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;If you’re going to use your own structure and naming conventions, then you will need to edit the Gruntfile accordingly.&lt;/p&gt;
+&lt;p&gt;You’re probably going to want to you use your own structure and naming conventions, so you will need to edit the Gruntfile accordingly… more on that later.&lt;/p&gt;
 
 &lt;h3 id=&quot;getting-some-plugins&quot;&gt;Getting some plugins&lt;/h3&gt;
 
-&lt;p&gt;All of the plugins that Grunt will use are stored in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/node_modules&lt;/code&gt; directory.&lt;/p&gt;
+&lt;p&gt;All of the plugins that we’re going to use are stored in the &lt;em&gt;node_modules&lt;/em&gt; directory.&lt;/p&gt;
 
-&lt;p&gt;You may have noticed there is no directory in the repo you forked. On an ongoing project a &lt;code class=&quot;highlighter-rouge&quot;&gt;/node_modules&lt;/code&gt; will include thousands of files, which you can store remotely if that’s how you like to work. But it’s not detrimental to the project if you don’t do this.&lt;/p&gt;
+&lt;p&gt;You may have noticed there is no such directory in the repo you forked. In all Grunt projects a &lt;em&gt;node_modules&lt;/em&gt; will include thousands of files, I don’t see the point in pushing these files to a remote repo.&lt;/p&gt;
 
-&lt;p&gt;We can run a single command in Terminal &lt;code class=&quot;highlighter-rouge&quot;&gt;npm-install&lt;/code&gt; which downloads all of the plugins we need to our local environment. Be sure to add &lt;code class=&quot;highlighter-rouge&quot;&gt;node_modules&lt;/code&gt; to .gitignore to make sure you don’t push to your remote repo.&lt;/p&gt;
+&lt;p&gt;You will also see a &lt;em&gt;package.json&lt;/em&gt; file which contains the name of the project and a list of plugins we will be using. If you’re &lt;em&gt;package.json&lt;/em&gt; file has a pre-populated list of plugins (like in this project) you can simply run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;$ npm install&lt;/code&gt; to download them to your local environment. Running this command creates the &lt;em&gt;node_modules&lt;/em&gt; directory locally and the directories for each plugin within.&lt;/p&gt;
+
+&lt;p&gt;Note: any additional plugins you add to your project will update this file so you can leave this file alone from now on.&lt;/p&gt;
 
 &lt;p&gt;Once we have the plugins we’re ready to look at our Gruntfile.&lt;/p&gt;
 
-&lt;h3 id=&quot;configuring-the-gruntfile&quot;&gt;Configuring the Gruntfile&lt;/h3&gt;
+&lt;h3 id=&quot;the-gruntfile&quot;&gt;The Gruntfile&lt;/h3&gt;
 
-&lt;p&gt;Each Grunt project has a Gruntfile. This is a configuration file where our tasks are setup. The file should and will always be named &lt;code class=&quot;highlighter-rouge&quot;&gt;Gruntfile.js&lt;/code&gt; otherwise Grunt will error when your try to run a task.&lt;/p&gt;
+&lt;p&gt;Each Grunt project has a Gruntfile. This is a configuration file where our tasks are setup. The file should and will always be named &lt;em&gt;Gruntfile.js&lt;/em&gt; otherwise Grunt will error when your try to run a task.&lt;/p&gt;
 
 &lt;p&gt;Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the plugins and register each task at the bottom.&lt;/p&gt;
 
@@ -130,11 +132,11 @@
 
 &lt;p&gt;Most tasks share similar characteristics with slight variations depending on how the code was written by the developer who built the plugin.&lt;/p&gt;
 
-&lt;p&gt;Each task tends to have it’s own Github repo where you can explore how the task works and is setup - there are some links below to the repo of each task included in this pack. I would recommending taking a look at the README of each plugin to get a feel for each one should be used.&lt;/p&gt;
+&lt;p&gt;Each task tends to have it’s own Github repo where you can explore how the task works and is setup - there are some links below to the repo of each task included in this pack. I would recommending taking a look at the &lt;em&gt;README.md&lt;/em&gt; of each plugin to get a feel for each one should be used.&lt;/p&gt;
 
 &lt;p&gt;Familiarising yourself with the structure of tasks, running tasks, editing tasks, breaking tasks and finding out how you broke them will serve you well in your future task automation.&lt;/p&gt;
 
-&lt;h5 id=&quot;heres-an-image-compression-task&quot;&gt;Here’s an image compression task:&lt;/h5&gt;
+&lt;h5 id=&quot;heres-an-example-image-optimisation-task&quot;&gt;Here’s an example image optimisation task:&lt;/h5&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;optimise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -151,9 +153,9 @@
 &lt;ul&gt;
   &lt;li&gt;This task as one target: &lt;code class=&quot;highlighter-rouge&quot;&gt;optimise&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;This looks through the current working directory (&lt;code class=&quot;highlighter-rouge&quot;&gt;cwd&lt;/code&gt;), where our uncompressed images are saved.&lt;/li&gt;
-  &lt;li&gt;It then looks for source files (&lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt;) to optimise. Note in this example we’re using a wildcard (&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;) to tell the plugin to target all files in our current working directory with the file extensions of .png, .jpg, .gif and .svg&lt;/li&gt;
-  &lt;li&gt;It then makes new versions of all the optimised images in the &lt;code class=&quot;highlighter-rouge&quot;&gt;www/images&lt;/code&gt; directory&lt;/li&gt;
-  &lt;li&gt;If you’ve changed your directory setup you will need to change the location of the &lt;code class=&quot;highlighter-rouge&quot;&gt;cwd&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;dest&lt;/code&gt; accordingly&lt;/li&gt;
+  &lt;li&gt;It then looks for source files (&lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt;) to optimise. Note in this example we’re using a wildcard (&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;) to tell the plugin to target all files in our current working directory with the file extensions of &lt;em&gt;.png&lt;/em&gt;, &lt;em&gt;.jpg&lt;/em&gt;, &lt;em&gt;.gif&lt;/em&gt; and &lt;em&gt;.svg&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;It then makes new versions of all the optimised images in the &lt;em&gt;www/images&lt;/em&gt; directory.&lt;/li&gt;
+  &lt;li&gt;If you’ve changed your directory setup you will need to change the location of the &lt;code class=&quot;highlighter-rouge&quot;&gt;cwd&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;dest&lt;/code&gt; accordingly.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h5 id=&quot;another-task-example-with-a-different-structure-this-time-compiling-sass&quot;&gt;Another task example with a different structure, this time compiling Sass:&lt;/h5&gt;
@@ -171,58 +173,106 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;ul&gt;
-  &lt;li&gt;This task is setup a little differently, with two targets &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; target creates a source map for the compiled CSS file (really handy). This option is currently set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; however, which means no source map will be generated&lt;/li&gt;
-  &lt;li&gt;The second target of this task dictates where the compiled CSS will be generated to and from directory it is created from&lt;/li&gt;
-  &lt;li&gt;The first part shows which directory the final CSS goes. The second part shows the directory where the separate Sass files are located&lt;/li&gt;
+  &lt;li&gt;This task is setup a little differently, with two targets &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; target creates a source map for the compiled CSS file (really handy). This option is currently set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; however, which means no source map will be generated.&lt;/li&gt;
+  &lt;li&gt;The second target of this task dictates where the compiled CSS will be generated to and from directory it is created from.&lt;/li&gt;
+  &lt;li&gt;The first part shows which directory the final CSS goes. The second part shows the directory where the separate Sass files are located.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;running-tasks&quot;&gt;Running tasks&lt;/h2&gt;
+
+&lt;p&gt;Now you’ve got to know Grunt it’s time to head back to Terminal and start writing some commands.&lt;/p&gt;
 
 &lt;h3 id=&quot;tasks-included-with-this-boilerplate&quot;&gt;Tasks included with this boilerplate&lt;/h3&gt;
 
 &lt;h4 id=&quot;compile-css&quot;&gt;Compile CSS&lt;/h4&gt;
 
-&lt;p&gt;Task name: &lt;strong&gt;&lt;a href=&quot;https://github.com/sindresorhus/grunt-sass&quot;&gt;grunt-sass&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Task name: &lt;em&gt;&lt;a href=&quot;https://github.com/sindresorhus/grunt-sass&quot;&gt;grunt-sass&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Command: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ grunt css&lt;/code&gt;&lt;/p&gt;
 
+&lt;h5 id=&quot;how-this-task-works&quot;&gt;How this task works&lt;/h5&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Compiles Sass files inside the &lt;strong&gt;_css-src&lt;/strong&gt; directory to CSS files&lt;/li&gt;
+  &lt;li&gt;Compiles Sass files inside the &lt;em&gt;_css-src&lt;/em&gt; directory to CSS files&lt;/li&gt;
   &lt;li&gt;Adds in vendor prefixes and minify CSS using posts&lt;/li&gt;
   &lt;li&gt;Compiles the resulting CSS files to a specific directory&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;compile-html&quot;&gt;Compile HTML&lt;/h4&gt;
 
-&lt;p&gt;Task name: &lt;strong&gt;&lt;a href=&quot;https://github.com/fatso83/grunt-codekit&quot;&gt;grunt-codekit&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Task name: &lt;em&gt;&lt;a href=&quot;https://github.com/fatso83/grunt-codekit&quot;&gt;grunt-codekit&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Command: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ grunt html&lt;/code&gt;&lt;/p&gt;
 
+&lt;h5 id=&quot;how-it-works&quot;&gt;How it works&lt;/h5&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Compiles multiple HTML files inside the &lt;strong&gt;_html-src&lt;/strong&gt; directory into &lt;strong&gt;.kit&lt;/strong&gt; files&lt;/li&gt;
-  &lt;li&gt;Converts &lt;strong&gt;.kit&lt;/strong&gt; files to &lt;strong&gt;.html&lt;/strong&gt; files and moves them to a specific directory&lt;/li&gt;
+  &lt;li&gt;Compiles multiple HTML files inside the &lt;em&gt;_html-src&lt;/em&gt; directory into &lt;em&gt;.kit&lt;/em&gt; files&lt;/li&gt;
+  &lt;li&gt;Converts &lt;em&gt;.kit&lt;/em&gt; files to &lt;em&gt;.html&lt;/em&gt; files and moves them to a specific directory&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;concatenate-javascript&quot;&gt;Concatenate Javascript&lt;/h4&gt;
 
-&lt;p&gt;Task name: &lt;strong&gt;&lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-uglify&quot;&gt;grunt-contrib-uglify&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Task name: &lt;em&gt;&lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-uglify&quot;&gt;grunt-contrib-uglify&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Command: &lt;code class=&quot;highlighter-rouge&quot;&gt;$ grunt js&lt;/code&gt;&lt;/p&gt;
 
+&lt;h5 id=&quot;how-it-works-1&quot;&gt;How it works&lt;/h5&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Concatenates multiple Javascript files inside the &lt;strong&gt;_js-src&lt;/strong&gt; directory into a single minified file&lt;/li&gt;
+  &lt;li&gt;Concatenates multiple Javascript files inside the &lt;em&gt;_js-src&lt;/em&gt; directory into a single minified file&lt;/li&gt;
   &lt;li&gt;Moves the resulting JS file to a specific directory&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;optimise-images&quot;&gt;Optimise images&lt;/h4&gt;
 
-&lt;p&gt;Task name: &lt;strong&gt;&lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-imagemin&quot;&gt;grunt-contrib-imagemin&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Task name: &lt;em&gt;&lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-imagemin&quot;&gt;grunt-contrib-imagemin&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Command &lt;code class=&quot;highlighter-rouge&quot;&gt;$ grunt img&lt;/code&gt;&lt;/p&gt;
 
+&lt;h5 id=&quot;how-it-works-2&quot;&gt;How it works&lt;/h5&gt;
+
 &lt;ul&gt;
-  &lt;li&gt;Optimises all images inside the &lt;strong&gt;_img-src&lt;/strong&gt; directory&lt;/li&gt;
+  &lt;li&gt;Optimises all images inside the &lt;em&gt;_img-src&lt;/em&gt; directory&lt;/li&gt;
   &lt;li&gt;Moves the optimised images to a specific directory&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;Now you have the ability to run individual tasks your development time will be noticeably quicker. But we can take our newly found knowledge of Grunt a step further.&lt;/p&gt;
+
+&lt;h2 id=&quot;going-to-the-next-level&quot;&gt;Going to the next level&lt;/h2&gt;
+
+&lt;p&gt;Using Terminal to run individual tasks is a great way to learn Grunt, but this isn’t an efficient way of working on a live project. We can take our automation to the next level and we can do this using the &lt;em&gt;grunt-watch&lt;/em&gt; task.&lt;/p&gt;
+
+&lt;p&gt;This task watches a directory and runs specified sub-tasks when additions and changes are made to files within that directory.&lt;/p&gt;
+
+&lt;p&gt;The great thing about about &lt;em&gt;grunt-watch&lt;/em&gt; is you run the command once and leave it to work its magic in the background while you go about your work.&lt;/p&gt;
+
+&lt;h5 id=&quot;heres-an-example-grunt-watch-task&quot;&gt;Here’s an example grunt-watch task:&lt;/h5&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;_css-src/**/*.scss&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nl&quot;&gt;spawn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;livereload&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35729&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;added&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;changed&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;In this example there is a sub-task called &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;This sub-task watches the &lt;em&gt;_css-src&lt;/em&gt; directory and all files within with the file extension &lt;em&gt;.scss&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;If you refer to the area in the Gruntfile where tasks are registered you’ll see&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You will notice in our Gruntfile a number of sub-tasks within our &lt;em&gt;watch&lt;/em&gt; task. Take some time to familiarise yourself with how sub-tasks are written and how the link with other tasks in the same Gruntfile.&lt;/p&gt;
+
+&lt;p&gt;To run the &lt;em&gt;watch&lt;/em&gt; task simply run &lt;code class=&quot;highlighter-rouge&quot;&gt;$ grunt watch&lt;/code&gt; and you’re good to go.&lt;/p&gt;
 
 &lt;h2 id=&quot;files-hosted-on-github&quot;&gt;Files hosted on Github&lt;/h2&gt;
 
