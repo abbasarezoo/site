@@ -6,19 +6,17 @@
 </description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 26 Jun 2016 20:43:22 +0100</pubDate>
-    <lastBuildDate>Sun, 26 Jun 2016 20:43:22 +0100</lastBuildDate>
-    <generator>Jekyll v3.1.3</generator>
+    <pubDate>Tue, 28 Jun 2016 17:28:09 +0100</pubDate>
+    <lastBuildDate>Tue, 28 Jun 2016 17:28:09 +0100</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Using Grunt with a front-end project for the first time</title>
         <description>&lt;h2 id=&quot;before-we-start&quot;&gt;Before we start&lt;/h2&gt;
 
-&lt;p&gt;For this guide you’ll need a code editor and a command line application. For the purposes of this guide I’ll be using Terminal (Mac).&lt;/p&gt;
+&lt;p&gt;Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide you’ll need a code editor and a command line application. I’ll be using Terminal (Mac) during this guide.&lt;/p&gt;
 
-&lt;p&gt;Having a working knowledge of front-end development will help. It is also assumed you are familiar with Git and have used Github before.&lt;/p&gt;
-
-&lt;p&gt;Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.&lt;/p&gt;
+&lt;p&gt;Having a working knowledge of front-end development is a must. It is also assumed that you’re familiar with Git and have used Github before.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-grunt&quot;&gt;What is Grunt?&lt;/h2&gt;
 
@@ -35,9 +33,7 @@
   &lt;li&gt;Install &lt;a href=&quot;http://gruntjs.com/getting-started&quot;&gt;Grunt’s command line interface&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners.&lt;/p&gt;
-
-&lt;p&gt;Once you’re all setup we can fork the boilerplate from our Github repo and start getting to know Grunt.&lt;/p&gt;
+&lt;p&gt;Once you’re all setup, we can fork the boilerplate and start getting to know Grunt.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-boilerplate&quot;&gt;The boilerplate&lt;/h2&gt;
 
@@ -87,7 +83,7 @@
 
 &lt;p&gt;Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the plugins and register each task at the bottom.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// TASK CONFIGURATION&lt;/span&gt;
 
@@ -138,7 +134,7 @@
 
 &lt;h5 id=&quot;heres-an-example-image-optimisation-task&quot;&gt;Here’s an example image optimisation task:&lt;/h5&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;optimise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nl&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
             &lt;span class=&quot;na&quot;&gt;expand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -160,7 +156,7 @@
 
 &lt;h5 id=&quot;another-task-example-with-a-different-structure-this-time-compiling-sass&quot;&gt;Another task example with a different structure, this time compiling Sass:&lt;/h5&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nl&quot;&gt;sourceMap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
@@ -250,7 +246,7 @@
 
 &lt;h5 id=&quot;heres-an-example-grunt-watch-task&quot;&gt;Here’s an example grunt-watch task:&lt;/h5&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nl&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nl&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;_css-src/**/*.scss&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;tasks&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;

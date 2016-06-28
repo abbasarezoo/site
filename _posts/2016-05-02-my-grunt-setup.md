@@ -8,11 +8,9 @@ category: Thoughts
 
 ## 	Before we start
 
-For this guide you'll need a code editor and a command line application. For the purposes of this guide I'll be using Terminal (Mac).
+Grunt is a command line tool that uses a only small amount of commands. If you're unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide you'll need a code editor and a command line application. I'll be using Terminal (Mac) during this guide.
 
-Having a working knowledge of front-end development will help. It is also assumed you are familiar with Git and have used Github before.
-
-Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.
+Having a working knowledge of front-end development is a must. It is also assumed that you’re familiar with Git and have used Github before.
 
 ## What is Grunt?
 
@@ -27,9 +25,7 @@ If you've never used Grunt before you will need to:
 - Install [Node.js](https://nodejs.org/en/)
 - Install [Grunt's command line interface](http://gruntjs.com/getting-started)
 
-Grunt is a command line tool that uses a only small amount of commands. If you're unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners.
-
-Once you're all setup we can fork the boilerplate from our Github repo and start getting to know Grunt.
+Once you're all setup, we can fork the boilerplate and start getting to know Grunt.
 
 ## The boilerplate
 

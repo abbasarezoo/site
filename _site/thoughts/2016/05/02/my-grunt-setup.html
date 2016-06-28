@@ -72,11 +72,9 @@
   <article class="post-content">
     <h2 id="before-we-start">Before we start</h2>
 
-<p>For this guide you’ll need a code editor and a command line application. For the purposes of this guide I’ll be using Terminal (Mac).</p>
+<p>Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide you’ll need a code editor and a command line application. I’ll be using Terminal (Mac) during this guide.</p>
 
-<p>Having a working knowledge of front-end development will help. It is also assumed you are familiar with Git and have used Github before.</p>
-
-<p>Not all projects are the same, so not all Grunt setups are be the same either. This boilerplate lays the foundations to create your own setup on a project-by-project basis.</p>
+<p>Having a working knowledge of front-end development is a must. It is also assumed that you’re familiar with Git and have used Github before.</p>
 
 <h2 id="what-is-grunt">What is Grunt?</h2>
 
@@ -93,9 +91,7 @@
   <li>Install <a href="http://gruntjs.com/getting-started">Grunt’s command line interface</a></li>
 </ul>
 
-<p>Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners.</p>
-
-<p>Once you’re all setup we can fork the boilerplate from our Github repo and start getting to know Grunt.</p>
+<p>Once you’re all setup, we can fork the boilerplate and start getting to know Grunt.</p>
 
 <h2 id="the-boilerplate">The boilerplate</h2>
 
@@ -145,7 +141,7 @@
 
 <p>Open up the file and take a look at the basic setup. In our setup we configure each task at the top, then load the plugins and register each task at the bottom.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
 
 <span class="c1">// TASK CONFIGURATION</span>
 
@@ -196,7 +192,7 @@
 
 <h5 id="heres-an-example-image-optimisation-task">Here’s an example image optimisation task:</h5>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">imagemin</span><span class="err">:</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">imagemin</span><span class="err">:</span> <span class="p">{</span>
     <span class="nl">optimise</span><span class="p">:</span> <span class="p">{</span>
         <span class="nl">files</span><span class="p">:</span> <span class="p">[{</span>
             <span class="na">expand</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -218,7 +214,7 @@
 
 <h5 id="another-task-example-with-a-different-structure-this-time-compiling-sass">Another task example with a different structure, this time compiling Sass:</h5>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">sass</span><span class="err">:</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">sass</span><span class="err">:</span> <span class="p">{</span>
     <span class="nl">options</span><span class="p">:</span> <span class="p">{</span>
         <span class="nl">sourceMap</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">},</span>
@@ -308,7 +304,7 @@
 
 <h5 id="heres-an-example-grunt-watch-task">Here’s an example grunt-watch task:</h5>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">watch</span><span class="err">:</span> <span class="p">{</span>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">watch</span><span class="err">:</span> <span class="p">{</span>
     <span class="nl">css</span><span class="p">:</span> <span class="p">{</span>
         <span class="nl">files</span><span class="p">:</span> <span class="p">[</span><span class="s1">'_css-src/**/*.scss'</span><span class="p">],</span>
         <span class="nx">tasks</span><span class="err">:</span> <span class="p">[</span><span class="s1">'css'</span><span class="p">],</span>
