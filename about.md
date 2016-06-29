@@ -1,11 +1,17 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hello there I'm Abbas Arezoo, Digital Creative Manager and Lead Developer at Vivid Creative. My role is to lead and oversee all digital creative projects, working closely with our internal design and development teams. I work with a range of clients from start-ups to established global brands.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+## Skills to pay the bills
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+- Digital strategy
+- User experience
+- Creative direction
+- Front-end development
+- Testing and deployment
+
+My name means lion in arabic.

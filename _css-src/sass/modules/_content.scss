@@ -174,17 +174,18 @@
 
     blockquote {
         margin: 4rem 0;
-        border-top: 1px solid $white;
-        border-bottom: 1px solid $white;
+        border-top: 2px solid rgba($white, 0.5);
+        border-bottom: 2px solid rgba($white, 0.5);
 
         text-align: center;
 
             @include mq(sml-tablet) {
-                padding: 0 25%;
+                width: 75%;
+                padding: 0 10%;
+                margin: 8rem auto;
             }
 
             p {
-                font-style: italic;
                 color: $orange;
             }
 
