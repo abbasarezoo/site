@@ -6,7 +6,13 @@ date:   2016-06-27 08:29:49
 category: Skills
 ---
 
-## 	Before we start
+http://alistapart.com/article/responsive-images-in-practice
+
+What are responsive images
+
+The current state of responsive images - Wordpress does it out of the box in content areas… not ACF fields
+
+We can solve this by creating a handy function
 
 ## Handy links
 
