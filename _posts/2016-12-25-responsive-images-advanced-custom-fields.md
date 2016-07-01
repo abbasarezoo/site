@@ -2,7 +2,7 @@
 layout: post
 title:  "Responsive images and Advanced Custom Fields"
 description: "Create a simple function to enhance on your Wordpress builds."
-date:   2016-06-27 08:29:49
+date:   2016-12-25 08:29:49
 category: Skills
 ---
 
