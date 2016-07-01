@@ -45,7 +45,7 @@ Each Grunt project has a Gruntfile. This is a configuration file where our tasks
 
 Open up the file and take a look at the basic setup. In our file plugins are loaded at the top, tasks configured in the middle and registered at the bottom.
 
-```js
+```
 module.exports = function(grunt) {
 
 // LOAD EACH PLUGIN
@@ -90,7 +90,7 @@ Each task tends to have it's own Github repo where you can explore how the task 
 
 #### Here's an example image optimisation task:
 
-``` js
+```
 imagemin: {
     optimise: {
         files: [{
@@ -109,7 +109,7 @@ imagemin: {
 
 #### Another task example with a different structure, this time compiling Sass:
 
-```js
+```
 sass: {
     options: {
         sourceMap: false
@@ -181,7 +181,7 @@ The great thing about about *grunt-watch* is you run the command once and leave 
 
 ##### Here's an example grunt-watch task:
 
-```js
+```
 watch: {
     css: {
         files: ['_css-src/**/*.scss'],

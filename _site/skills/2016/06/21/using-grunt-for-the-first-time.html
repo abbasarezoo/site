@@ -115,26 +115,26 @@
 
 <p>Open up the file and take a look at the basic setup. In our file plugins are loaded at the top, tasks configured in the middle and registered at the bottom.</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>module.exports = function(grunt) {
 
-<span class="c1">// LOAD EACH PLUGIN</span>
+// LOAD EACH PLUGIN
 
-<span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">'grunt-sass'</span><span class="p">);</span>
+grunt.loadNpmTasks('grunt-sass');
 
-<span class="c1">// TASK CONFIGURATION</span>
+// TASK CONFIGURATION
 
-<span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
-  <span class="na">pkg</span><span class="p">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">'package.son'</span><span class="p">),</span>
+grunt.initConfig({
+  pkg: grunt.file.readJSON('package.son'),
 
-    <span class="na">sass</span><span class="p">:</span> <span class="p">{</span>
+    sass: {
 
-      <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">sourceMap</span><span class="p">:</span> <span class="kc">false</span>
-      <span class="p">},</span>
+      options: {
+        sourceMap: false
+      },
 
-      <span class="na">dist</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">files</span><span class="p">:</span> <span class="p">{</span>
-          <span class="err">‘</span><span class="nx">build</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">css</span><span class="s1">': '</span><span class="nx">_css</span><span class="o">-</span><span class="nx">src</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">scss</span><span class="s1">'
+      dist: {
+        files: {
+          ‘build/style.css': '_css-src/style.scss'
         }
       }
 
@@ -144,9 +144,9 @@
 
 // REGISTER EACH TASK
 
-grunt.registerTask('</span><span class="nx">css</span><span class="err">'</span><span class="p">,</span> <span class="p">[</span><span class="nx">sass</span><span class="p">]);</span>
+grunt.registerTask('css', [sass]);
 
-<span class="p">};</span>
+};
 </code></pre>
 </div>
 
@@ -162,16 +162,16 @@ grunt.registerTask('</span><span class="nx">css</span><span class="err">'</span>
 
 <h4 id="heres-an-example-image-optimisation-task">Here’s an example image optimisation task:</h4>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">imagemin</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">optimise</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nl">files</span><span class="p">:</span> <span class="p">[{</span>
-            <span class="na">expand</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="na">cwd</span><span class="p">:</span> <span class="s1">'_img-src'</span><span class="p">,</span>
-            <span class="na">src</span><span class="p">:</span> <span class="p">[</span><span class="s1">'*.{png,jpg,gif,svg}'</span><span class="p">],</span>
-            <span class="na">dest</span><span class="p">:</span> <span class="s1">'build/images'</span>
-        <span class="p">}]</span>
-     <span class="p">}</span>
-<span class="p">},</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>imagemin: {
+    optimise: {
+        files: [{
+            expand: true,
+            cwd: '_img-src',
+            src: ['*.{png,jpg,gif,svg}'],
+            dest: 'build/images'
+        }]
+     }
+},
 </code></pre>
 </div>
 <ul>
@@ -183,16 +183,16 @@ grunt.registerTask('</span><span class="nx">css</span><span class="err">'</span>
 
 <h4 id="another-task-example-with-a-different-structure-this-time-compiling-sass">Another task example with a different structure, this time compiling Sass:</h4>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">sass</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">options</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nl">sourceMap</span><span class="p">:</span> <span class="kc">false</span>
-    <span class="p">},</span>
-    <span class="nx">dist</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nl">files</span><span class="p">:</span> <span class="p">{</span>
-            <span class="err">‘</span><span class="nx">build</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">css</span><span class="s1">': '</span><span class="nx">_css</span><span class="o">-</span><span class="nx">src</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">scss</span><span class="err">'</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">},</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>sass: {
+    options: {
+        sourceMap: false
+    },
+    dist: {
+        files: {
+            ‘build/style.css': '_css-src/style.scss'
+        }
+    }
+},
 </code></pre>
 </div>
 <ul>
@@ -265,17 +265,17 @@ grunt.registerTask('</span><span class="nx">css</span><span class="err">'</span>
 
 <h5 id="heres-an-example-grunt-watch-task">Here’s an example grunt-watch task:</h5>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">watch</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nl">css</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nl">files</span><span class="p">:</span> <span class="p">[</span><span class="s1">'_css-src/**/*.scss'</span><span class="p">],</span>
-        <span class="nx">tasks</span><span class="err">:</span> <span class="p">[</span><span class="s1">'css'</span><span class="p">],</span>
-            <span class="nx">options</span><span class="err">:</span> <span class="p">{</span>
-                <span class="nl">spawn</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-                <span class="nx">livereload</span><span class="err">:</span><span class="mi">35729</span><span class="p">,</span>
-                <span class="nx">event</span><span class="err">:</span> <span class="p">[</span><span class="s1">'added'</span><span class="p">,</span> <span class="s1">'changed'</span><span class="p">]</span>
-            <span class="p">},</span>
-    <span class="p">},</span>
-<span class="p">},</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>watch: {
+    css: {
+        files: ['_css-src/**/*.scss'],
+        tasks: ['css'],
+            options: {
+                spawn: false,
+                livereload:35729,
+                event: ['added', 'changed']
+            },
+    },
+},
 </code></pre>
 </div>
 
