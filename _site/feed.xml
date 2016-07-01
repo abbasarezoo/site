@@ -6,9 +6,37 @@
 </description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Jun 2016 08:40:30 +0100</pubDate>
-    <lastBuildDate>Thu, 30 Jun 2016 08:40:30 +0100</lastBuildDate>
+    <pubDate>Fri, 01 Jul 2016 08:30:27 +0100</pubDate>
+    <lastBuildDate>Fri, 01 Jul 2016 08:30:27 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Responsive images and Advanced Custom Fields</title>
+        <description>&lt;p&gt;http://alistapart.com/article/responsive-images-in-practice&lt;/p&gt;
+
+&lt;p&gt;What are responsive images&lt;/p&gt;
+
+&lt;p&gt;The current state of responsive images - Wordpress does it out of the box in content areas… not ACF fields&lt;/p&gt;
+
+&lt;p&gt;We can solve this by creating a handy function&lt;/p&gt;
+
+&lt;h2 id=&quot;handy-links&quot;&gt;Handy links&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/abbasarezoo/grunt-boilerplate/&quot;&gt;The Grunt boilerplate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gruntjs.com/&quot;&gt;Official Grunt website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://24ways.org/2013/grunt-is-not-weird-and-hard/&quot;&gt;Chris Coyier’s article on Grunt is excellent&lt;/a&gt;. This is where I started learning Grunt, recommended reading.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 27 Jun 2016 09:29:49 +0100</pubDate>
+        <link>http://www.abbasarezoo.com/skills/2016/06/27/responsive-images-advanced-custom-fields.html</link>
+        <guid isPermaLink="true">http://www.abbasarezoo.com/skills/2016/06/27/responsive-images-advanced-custom-fields.html</guid>
+        
+        
+        <category>Skills</category>
+        
+      </item>
     
       <item>
         <title>Using Grunt with a front-end project for the first time</title>
@@ -76,17 +104,17 @@
 
       &lt;span class=&quot;na&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;s1&quot;&gt;&#39;_css-src/styles/style.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;_css-src/sass/style.scss&#39;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+          &lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;: &#39;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_css&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;
+        }
+      }
 
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    },
 
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+});
 
-&lt;span class=&quot;c1&quot;&gt;// REGISTER EACH TASK&lt;/span&gt;
+// REGISTER EACH TASK
 
-&lt;span class=&quot;nx&quot;&gt;grunt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;registerTask&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+grunt.registerTask(&#39;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -110,7 +138,7 @@
             &lt;span class=&quot;na&quot;&gt;expand&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
             &lt;span class=&quot;na&quot;&gt;cwd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;_img-src&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
             &lt;span class=&quot;na&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;*.{png,jpg,gif,svg}&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
-            &lt;span class=&quot;na&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;www/images&#39;&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;build/images&#39;&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
@@ -131,7 +159,7 @@
     &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nl&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;s1&quot;&gt;&#39;_css-src/styles/style.css&#39;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;_css-src/sass/style.scss&#39;&lt;/span&gt;
+            &lt;span class=&quot;err&quot;&gt;‘&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;: &#39;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_css&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;scss&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
@@ -246,31 +274,9 @@
   &lt;li&gt;&lt;a href=&quot;https://24ways.org/2013/grunt-is-not-weird-and-hard/&quot;&gt;Chris Coyier’s article on Grunt is excellent&lt;/a&gt;. This is where I started learning Grunt, recommended reading.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Tue, 28 Jun 2016 09:29:49 +0100</pubDate>
-        <link>http://www.abbasarezoo.com/skills/2016/06/28/using-grunt-for-the-first-time.html</link>
-        <guid isPermaLink="true">http://www.abbasarezoo.com/skills/2016/06/28/using-grunt-for-the-first-time.html</guid>
-        
-        
-        <category>Skills</category>
-        
-      </item>
-    
-      <item>
-        <title>Responsive images and Advanced Custom Fields</title>
-        <description>&lt;h2 id=&quot;before-we-start&quot;&gt;Before we start&lt;/h2&gt;
-
-&lt;h2 id=&quot;handy-links&quot;&gt;Handy links&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/abbasarezoo/grunt-boilerplate/&quot;&gt;The Grunt boilerplate&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://gruntjs.com/&quot;&gt;Official Grunt website&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js website&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://24ways.org/2013/grunt-is-not-weird-and-hard/&quot;&gt;Chris Coyier’s article on Grunt is excellent&lt;/a&gt;. This is where I started learning Grunt, recommended reading.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 27 Jun 2016 09:29:49 +0100</pubDate>
-        <link>http://www.abbasarezoo.com/skills/2016/06/27/responsive-images-advanced-custom-fields.html</link>
-        <guid isPermaLink="true">http://www.abbasarezoo.com/skills/2016/06/27/responsive-images-advanced-custom-fields.html</guid>
+        <pubDate>Tue, 21 Jun 2016 09:29:49 +0100</pubDate>
+        <link>http://www.abbasarezoo.com/skills/2016/06/21/using-grunt-for-the-first-time.html</link>
+        <guid isPermaLink="true">http://www.abbasarezoo.com/skills/2016/06/21/using-grunt-for-the-first-time.html</guid>
         
         
         <category>Skills</category>
@@ -299,9 +305,9 @@
 
 &lt;p&gt;A website isn’t just pages of code and images rendered in a browser, there’s a lot more to it than that baby.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 18 Mar 2016 20:29:49 +0000</pubDate>
-        <link>http://www.abbasarezoo.com/thoughts/2016/03/18/web-design-isnt-dying.html</link>
-        <guid isPermaLink="true">http://www.abbasarezoo.com/thoughts/2016/03/18/web-design-isnt-dying.html</guid>
+        <pubDate>Wed, 18 May 2016 21:29:49 +0100</pubDate>
+        <link>http://www.abbasarezoo.com/thoughts/2016/05/18/web-design-isnt-dying.html</link>
+        <guid isPermaLink="true">http://www.abbasarezoo.com/thoughts/2016/05/18/web-design-isnt-dying.html</guid>
         
         
         <category>Thoughts</category>

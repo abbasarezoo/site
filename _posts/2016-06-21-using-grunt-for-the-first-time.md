@@ -2,7 +2,7 @@
 layout: post
 title:  "Using Grunt with a front-end project for the first time"
 description: "This is beginner's guide to setting up a project using the popular task runner and a simple directory setup"
-date:   2016-06-28 08:29:49
+date:   2016-06-21 08:29:49
 category: Skills
 ---
 
@@ -65,7 +65,7 @@ grunt.initConfig({
 
       dist: {
         files: {
-          '_css-src/styles/style.css': '_css-src/sass/style.scss'
+          ‘build/style.css': '_css-src/style.scss'
         }
       }
 
@@ -97,7 +97,7 @@ imagemin: {
             expand: true,
             cwd: '_img-src',
             src: ['*.{png,jpg,gif,svg}'],
-            dest: 'www/images'
+            dest: 'build/images'
         }]
      }
 },
@@ -116,7 +116,7 @@ sass: {
     },
     dist: {
         files: {
-            '_css-src/styles/style.css': '_css-src/sass/style.scss'
+            ‘build/style.css': '_css-src/style.scss'
         }
     }
 },
@@ -202,8 +202,6 @@ watch: {
 You will notice in our Gruntfile a number of sub-tasks within our *watch* task. Take some time to familiarise yourself with how sub-tasks are written and how the link with other tasks in the same Gruntfile.
 
 To run the *watch* task simply run `$ grunt watch` and you're good to go.
-
-## Live reload
 
 ## Finishing up
 

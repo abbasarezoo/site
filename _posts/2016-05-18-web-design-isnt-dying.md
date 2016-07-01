@@ -2,7 +2,7 @@
 layout: post
 title:  "Web design isn't dead, but the term is dying"
 description: "A website isn't just pages of code and images rendered in the browser. It forms a small part of a larger digital strategy."
-date:   2016-03-18 20:29:49
+date:   2016-05-18 20:29:49
 category: Thoughts
 ---
 

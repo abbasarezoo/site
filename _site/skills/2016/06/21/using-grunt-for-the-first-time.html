@@ -10,7 +10,7 @@
   <meta name="description" content="This is beginner's guide to setting up a project using the popular task runner and a simple directory setup">
 
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="http://www.abbasarezoo.com/skills/2016/06/28/using-grunt-for-the-first-time.html">
+  <link rel="canonical" href="http://www.abbasarezoo.com/skills/2016/06/21/using-grunt-for-the-first-time.html">
   <link rel="alternate" type="application/rss+xml" title="Abbas Arezoo - Designer/Developer" href="http://www.abbasarezoo.com/feed.xml" />
 </head>
 
@@ -62,7 +62,7 @@
       <main class="content">
         <div class="post">
   <header class="post-header">
-	  	 <p class="post-meta">28.06.16</p>
+	  	 <p class="post-meta">21.06.16</p>
 	  	<div class="post-header--content">
 	    	<h1 class="post-title">Using Grunt with a front-end project for the first time</h1>
 	    	<h2 class="post-desc">This is beginner's guide to setting up a project using the popular task runner and a simple directory setup</h2>
@@ -134,17 +134,17 @@
 
       <span class="na">dist</span><span class="p">:</span> <span class="p">{</span>
         <span class="na">files</span><span class="p">:</span> <span class="p">{</span>
-          <span class="s1">'_css-src/styles/style.css'</span><span class="p">:</span> <span class="s1">'_css-src/sass/style.scss'</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
+          <span class="err">‘</span><span class="nx">build</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">css</span><span class="s1">': '</span><span class="nx">_css</span><span class="o">-</span><span class="nx">src</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">scss</span><span class="s1">'
+        }
+      }
 
-    <span class="p">},</span>
+    },
 
-<span class="p">});</span>
+});
 
-<span class="c1">// REGISTER EACH TASK</span>
+// REGISTER EACH TASK
 
-<span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">'css'</span><span class="p">,</span> <span class="p">[</span><span class="nx">sass</span><span class="p">]);</span>
+grunt.registerTask('</span><span class="nx">css</span><span class="err">'</span><span class="p">,</span> <span class="p">[</span><span class="nx">sass</span><span class="p">]);</span>
 
 <span class="p">};</span>
 </code></pre>
@@ -168,7 +168,7 @@
             <span class="na">expand</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="na">cwd</span><span class="p">:</span> <span class="s1">'_img-src'</span><span class="p">,</span>
             <span class="na">src</span><span class="p">:</span> <span class="p">[</span><span class="s1">'*.{png,jpg,gif,svg}'</span><span class="p">],</span>
-            <span class="na">dest</span><span class="p">:</span> <span class="s1">'www/images'</span>
+            <span class="na">dest</span><span class="p">:</span> <span class="s1">'build/images'</span>
         <span class="p">}]</span>
      <span class="p">}</span>
 <span class="p">},</span>
@@ -189,7 +189,7 @@
     <span class="p">},</span>
     <span class="nx">dist</span><span class="err">:</span> <span class="p">{</span>
         <span class="nl">files</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">'_css-src/styles/style.css'</span><span class="err">:</span> <span class="s1">'_css-src/sass/style.scss'</span>
+            <span class="err">‘</span><span class="nx">build</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">css</span><span class="s1">': '</span><span class="nx">_css</span><span class="o">-</span><span class="nx">src</span><span class="o">/</span><span class="nx">style</span><span class="p">.</span><span class="nx">scss</span><span class="err">'</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">},</span>
