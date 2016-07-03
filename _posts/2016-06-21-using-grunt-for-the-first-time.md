@@ -176,7 +176,7 @@ Using Terminal to run individual tasks is a great way to learn Grunt, but this i
 
 This task watches a directory and runs specified sub-tasks when additions and changes are made to files within that directory.
 
-The great thing about *grunt-watch* is you run the command once and leave it to work its magic in the background while you go about your work.
+> The great thing about *grunt-watch* is you run the command once and leave it to work its magic in the background while you go about your work.
 
 ##### Here's an example grunt-watch task:
 
