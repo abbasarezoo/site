@@ -6,21 +6,21 @@
 </description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jul 2016 21:15:24 +0100</pubDate>
-    <lastBuildDate>Fri, 01 Jul 2016 21:15:24 +0100</lastBuildDate>
+    <pubDate>Sun, 03 Jul 2016 16:13:19 +0100</pubDate>
+    <lastBuildDate>Sun, 03 Jul 2016 16:13:19 +0100</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
         <title>Using Grunt with a front-end project for the first time</title>
         <description>&lt;h2 id=&quot;before-we-start&quot;&gt;Before we start&lt;/h2&gt;
 
-&lt;p&gt;Grunt is a command line tool that uses a only small amount of commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide you’ll need a code editor and a command line application. I’ll be using Terminal (Mac) during this guide.&lt;/p&gt;
+&lt;p&gt;Grunt is a command line tool that requires you to use a few simple commands. If you’re unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide, you’ll need a code editor and a command line application. I’ll be using Terminal (Mac) during this guide.&lt;/p&gt;
 
-&lt;p&gt;Having a working knowledge of front-end development is a must. It is also assumed that you’re familiar with Git and have used Github before.&lt;/p&gt;
+&lt;p&gt;Having a working knowledge of front-end development is a must. I’ve you’ve never written a line of HTML or CSS in anger before then you probably won’t benefit from this guide. It is also assumed that you’re familiar with Git and have used Github before.&lt;/p&gt;
 
 &lt;h2 id=&quot;what-is-grunt&quot;&gt;What is Grunt?&lt;/h2&gt;
 
-&lt;p&gt;Grunt is a ‘task runner’ which has thousands of plugins that can be used to automate almost any task. There are other task runners available that may serve your needs better but I won’t be getting into the pro’s and con’s of the alternatives in this guide.&lt;/p&gt;
+&lt;p&gt;Grunt is a ‘task runner’ which has thousands of plugins that can be used to automate almost any task. There are other task runners available that may serve your needs better but I won’t be getting into the pros and cons of the alternatives in this guide.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The fact is: using any task runner will dramatically increase the speed of your development.&lt;/p&gt;
@@ -39,7 +39,7 @@
 
 &lt;h2 id=&quot;getting-some-plugins&quot;&gt;Getting some plugins&lt;/h2&gt;
 
-&lt;p&gt;All of the plugins that we’re going to use will be stored in a directory named &lt;em&gt;node_modules&lt;/em&gt;. But, you may have noticed there is no such directory in the repo you forked. In all Grunt projects a &lt;em&gt;node_modules&lt;/em&gt; will include thousands of files, I don’t see the point in pushing these files to a remote repo.&lt;/p&gt;
+&lt;p&gt;All of the plugins that we’re going to use will be stored in a directory named &lt;em&gt;node_modules&lt;/em&gt;. But, you may have noticed there is no such directory in the repo you forked. In all Grunt projects, a &lt;em&gt;node_modules&lt;/em&gt; will include thousands of files, I don’t see the point in pushing these files to a remote repo.&lt;/p&gt;
 
 &lt;h3 id=&quot;npm-install&quot;&gt;npm-install&lt;/h3&gt;
 
@@ -94,7 +94,7 @@ grunt.registerTask(&#39;css&#39;, [sass]);
 
 &lt;h3 id=&quot;interpreting-a-task&quot;&gt;Interpreting a task&lt;/h3&gt;
 
-&lt;p&gt;Most tasks share similar characteristics with slight variations depending on how the code was written by the developer who built the plugin.&lt;/p&gt;
+&lt;p&gt;Most tasks share similar characteristics with slight variations depending on how the plugin was developed.&lt;/p&gt;
 
 &lt;p&gt;Each task tends to have it’s own Github repo where you can explore how the task works and setup, &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-uglify&quot;&gt;here’s one&lt;/a&gt;. I would recommend taking a look at the &lt;em&gt;README.md&lt;/em&gt; of each plugin to get a feel for each one should be used.&lt;/p&gt;
 
@@ -139,9 +139,8 @@ grunt.registerTask(&#39;css&#39;, [sass]);
 &lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;This task is setup a little differently, with two targets &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;dist&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; target creates a source map for the compiled CSS file (really handy). This option is currently set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; however, which means no source map will be generated.&lt;/li&gt;
-  &lt;li&gt;The second target of this task dictates where the compiled CSS will be generated to and from directory it is created from.&lt;/li&gt;
-  &lt;li&gt;The first part shows which directory the final CSS goes. The second part shows the directory where the separate Sass files are located.&lt;/li&gt;
+  &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;options&lt;/code&gt; target creates a source map for the compiled CSS file (really handy). This option is currently set to &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; which means no source map will be generated.&lt;/li&gt;
+  &lt;li&gt;The second target of this task dictates where the compiled CSS will be generated to, and from which directory it is created from.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;running-tasks&quot;&gt;Running tasks&lt;/h2&gt;
@@ -203,7 +202,7 @@ grunt.registerTask(&#39;css&#39;, [sass]);
 
 &lt;p&gt;This task watches a directory and runs specified sub-tasks when additions and changes are made to files within that directory.&lt;/p&gt;
 
-&lt;p&gt;The great thing about about &lt;em&gt;grunt-watch&lt;/em&gt; is you run the command once and leave it to work its magic in the background while you go about your work.&lt;/p&gt;
+&lt;p&gt;The great thing about &lt;em&gt;grunt-watch&lt;/em&gt; is you run the command once and leave it to work its magic in the background while you go about your work.&lt;/p&gt;
 
 &lt;h5 id=&quot;heres-an-example-grunt-watch-task&quot;&gt;Here’s an example grunt-watch task:&lt;/h5&gt;
 
@@ -227,7 +226,7 @@ grunt.registerTask(&#39;css&#39;, [sass]);
   &lt;li&gt;If you refer to the area in the Gruntfile where tasks are registered you’ll see&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;You will notice in our Gruntfile a number of sub-tasks within our &lt;em&gt;watch&lt;/em&gt; task. Take some time to familiarise yourself with how sub-tasks are written and how the link with other tasks in the same Gruntfile.&lt;/p&gt;
+&lt;p&gt;You will notice in our Gruntfile a number of sub-tasks within our &lt;em&gt;watch&lt;/em&gt; task. Take some time to familiarise yourself with how sub-tasks are written and how they link with other tasks in the same Gruntfile.&lt;/p&gt;
 
 &lt;p&gt;To run the &lt;em&gt;watch&lt;/em&gt; task simply run &lt;code class=&quot;highlighter-rouge&quot;&gt;$ grunt watch&lt;/code&gt; and you’re good to go.&lt;/p&gt;
 
