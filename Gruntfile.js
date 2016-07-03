@@ -117,7 +117,7 @@ module.exports = function(grunt) {
 
             html: {
 
-                files: ['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md'],
+                files: ['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md', '*.md'],
                 tasks: ['shell:jekyll_build'],
                     options: {
                         spawn: false,
