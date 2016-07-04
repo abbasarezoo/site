@@ -6,19 +6,19 @@ date:   2016-12-25 08:29:49
 category: Advice
 ---
 
-## 1. Develop an online presence - create a website, show your work.
+## 1. Develop an online presence
 
-Most important.
+This is **the** most important piece of advice I can give you. Get yourself and your work online. When I get your CV the first thing I’m going to look for is your website. It also helps to have your own personal email address. An address like you@yourwebsite.com is going to make you look like the real deal, topbantz69@gmail.com (apologies if that’s you) isn’t.
 
-There’s a ton of free ways to promote yourself online beyond your own website or social media channels:
+Beyond that, there’s a ton of free ways to promote yourself online beyond your own website or social media channels:
 
-- Comment on blog posts
-- Give answers on Stack Overflow
+- Leave positive and constructive comments on blog posts. Don’t forget to include a link to your website and/or your Twitter if the site lets you.
+- If you’re a developer, give answers on Stack Overflow 
 - Post your work on Behance
 - Create prototypes and experiments on CodePen
 - Have a public GitHub repo where I can see your code
 
-I want to see the kind of work you create and the kind of people you follow. I’d be more put off by any derogatory comments on blog posts than pictures of you and the girls/lads out on the lash.
+I want to see the kind of work you create and the kind of people you follow.
 
 ## 2. Give yourself an identity
 
