@@ -1,48 +1,6 @@
 // =================================================
-// CONTENT
+// POST CONTENT
 // =================================================
-
-.intro-header {
-    padding: 15rem 1rem 0;
-    margin: 0 0 8rem;
-
-    text-align: center;
-
-        @include mq(tablet) {
-            padding: 15rem 10rem 0;
-        }
-
-
-        @include mq(desktop) {
-            width: 75%;
-            padding: 15rem 0 0;
-            margin: 0 auto 8rem;
-        }
-
-        h1 {
-            @include font-size($ft-3);
-
-                @include mq(tablet) {
-                    @include font-size($ft-2);
-                }
-
-                @include mq(desktop) {
-                    @include font-size($ft-1);
-                }
-
-        }
-
-        a {
-            color: inherit;
-
-                @include hover-state {
-                    color: $orange;
-                }
-
-        }
-
-
-}
 
 .post-content {
     min-height: 100vh;
@@ -165,24 +123,30 @@
     }
 
     pre {
-        margin: 2rem 0 5rem;
+        overflow-x: scroll;
 
+        margin: 2rem 0 4rem;
+
+        background-color: rgba($white, 0.33);
         border: 1px solid lighten($black,90%);
 
         @include font-size($ft-7);
+
+            @include mq(tablet) {
+                overflow-x: auto;
+            }
+            
     }
 
     blockquote {
         margin: 4rem 0;
-        border-top: 2px solid rgba($white, 0.5);
-        border-bottom: 2px solid rgba($white, 0.5);
+        padding: 0.5rem 2rem;
 
-        text-align: center;
+        background-color: rgba($white, 0.33);
+        border-left: 1rem solid rgba($black, 0.25);
 
             @include mq(sml-tablet) {
-                width: 75%;
-                padding: 0 10%;
-                margin: 8rem auto;
+                margin: 4rem 0 8rem;
             }
 
             p {

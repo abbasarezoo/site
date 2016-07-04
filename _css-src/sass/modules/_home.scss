@@ -1,17 +1,91 @@
 // =================================================
-// POST LIST
+// HOMEPAGE STYLES
 // =================================================
 
+// Layout
+
+.site-intro_header {
+    position: relative;
+    padding: 15rem 8rem 0;
+    margin: 0 0 8rem;
+
+    text-align: center;
+        
+        @include mq(laptop) {
+            width: 50%;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            float: left;
+
+            text-align: left;
+        }
+
+        @include mq(desktop) {
+            width: 40%;
+        }
+
+        h1 {
+            @include font-size($ft-3);
+
+                @include mq(laptop) {
+                    @include font-size($ft-2);
+                    @include center;
+
+                    display: block;
+                    width: 100%;
+                    padding: 0 6rem;
+                }
+
+                @include mq(desktop) {
+                    @include font-size($ft-1);
+                }
+
+        }
+
+        a {
+            color: inherit;
+
+                @include hover-state {
+                    color: $orange;
+                }
+
+        }
+
+}
+
+.post-list_outer {
+
+    @include mq(laptop) {
+        width: 50%;
+        height: 100vh;
+        float: right;
+
+        overflow-y: scroll;
+    }
+
+    @include mq(desktop) {
+        width: 60%;
+    }
+
+}
+
+// Post list
+
 .post-list {
+    @extend %clearfix;
+
     list-style-type: none;
 
+    display: block;
     width: 100%;
-    padding: 0 1rem;
+    // padding: 0 1rem;
 
-        @include mq(tablet) {
-            padding: 0 10rem;
-        }
-        
+    //     @include mq(tablet) {
+    //         padding: 0 10rem;
+    //     }
+    
+
 }
 
 .post-item {
@@ -31,15 +105,6 @@
 
         }
 
-        @include mq(tablet) {
-            width: 50%;
-            float: left;
-        }
-
-        @include mq(desktop) {
-            width: 33.333%;
-        }
-
 }
 
 .post-link {
@@ -47,13 +112,16 @@
 
     display: block;
     width: 100%;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
 
     text-decoration: none;
 
         @include mq(tablet) {
-            height: 30rem;
-            padding: 0;
+            padding: 8rem 6rem;
+        }
+
+        @include mq(desktop) {
+            padding: 12rem 6rem;
         }
 
         @include hover-state {
@@ -82,7 +150,7 @@
             margin: 0;
             padding: 0 2rem;
 
-            @include center;
+            //@include center;
         }
 
         h2 {

@@ -8,13 +8,13 @@ category: Skills
 
 ## 	Before we start
 
-Grunt is a command line tool that uses a only small amount of commands. If you're unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide you'll need a code editor and a command line application. I'll be using Terminal (Mac) during this guide.
+Grunt is a command line tool that requires you to use a few simple commands. If you're unfamiliar using the command line, getting to grips with Grunt is a nice introduction for beginners. For this guide, you'll need a code editor and a command line application. I'll be using Terminal (Mac) during this guide.
 
-Having a working knowledge of front-end development is a must. It is also assumed that you’re familiar with Git and have used Github before.
+Having a working knowledge of front-end development is a must. I've you've never written a line of HTML or CSS in anger before then you probably won't benefit from this guide. It is also assumed that you're familiar with Git and have used Github before.
 
 ## What is Grunt?
 
-Grunt is a 'task runner' which has thousands of plugins that can be used to automate almost any task. There are other task runners available that may serve your needs better but I won't be getting into the pro's and con's of the alternatives in this guide. 
+Grunt is a 'task runner' which has thousands of plugins that can be used to automate almost any task. There are other task runners available that may serve your needs better but I won't be getting into the pros and cons of the alternatives in this guide. 
 
 > The fact is: using any task runner will dramatically increase the speed of your development.
 
@@ -29,7 +29,7 @@ Once you're all setup, we can [fork the boilerplate](https://github.com/abbasare
 
 ## Getting some plugins
 
-All of the plugins that we're going to use will be stored in a directory named *node_modules*. But, you may have noticed there is no such directory in the repo you forked. In all Grunt projects a *node_modules* will include thousands of files, I don't see the point in pushing these files to a remote repo.
+All of the plugins that we're going to use will be stored in a directory named *node_modules*. But, you may have noticed there is no such directory in the repo you forked. In all Grunt projects, a *node_modules* will include thousands of files, I don't see the point in pushing these files to a remote repo.
 
 ### npm-install
 
@@ -82,7 +82,7 @@ grunt.registerTask('css', [sass]);
 
 ### Interpreting a task
 
-Most tasks share similar characteristics with slight variations depending on how the code was written by the developer who built the plugin. 
+Most tasks share similar characteristics with slight variations depending on how the plugin was developed. 
 
 Each task tends to have it's own Github repo where you can explore how the task works and setup, [here's one](https://github.com/gruntjs/grunt-contrib-uglify). I would recommend taking a look at the *README.md* of each plugin to get a feel for each one should be used.
 
@@ -122,9 +122,8 @@ sass: {
 },
 ```
 - This task is setup a little differently, with two targets `options` and `dist`.
-- The `options` target creates a source map for the compiled CSS file (really handy). This option is currently set to `false` however, which means no source map will be generated.
-- The second target of this task dictates where the compiled CSS will be generated to and from directory it is created from.
-- The first part shows which directory the final CSS goes. The second part shows the directory where the separate Sass files are located.
+- The `options` target creates a source map for the compiled CSS file (really handy). This option is currently set to `false` which means no source map will be generated.
+- The second target of this task dictates where the compiled CSS will be generated to, and from which directory it is created from.
 
 ## Running tasks
 
@@ -177,7 +176,7 @@ Using Terminal to run individual tasks is a great way to learn Grunt, but this i
 
 This task watches a directory and runs specified sub-tasks when additions and changes are made to files within that directory.
 
-The great thing about about *grunt-watch* is you run the command once and leave it to work its magic in the background while you go about your work.
+> The great thing about *grunt-watch* is you can run the command once and leave it to work its magic in the background while you go about your work.
 
 ##### Here's an example grunt-watch task:
 
@@ -199,7 +198,7 @@ watch: {
 - This sub-task watches the *_css-src* directory and all files within with the file extension *.scss*
 - If you refer to the area in the Gruntfile where tasks are registered you'll see 
 
-You will notice in our Gruntfile a number of sub-tasks within our *watch* task. Take some time to familiarise yourself with how sub-tasks are written and how the link with other tasks in the same Gruntfile.
+You will notice in our Gruntfile a number of sub-tasks within our *watch* task. Take some time to familiarise yourself with how sub-tasks are written and how they link with other tasks in the same Gruntfile.
 
 To run the *watch* task simply run `$ grunt watch` and you're good to go.
 
