@@ -8,9 +8,9 @@ category: Advice
 
 ## 1. Develop an online presence
 
-This is **the** most important piece of advice I can give you. Get yourself and your work online. 
+This is **the** most important piece of advice I can give you. It’s essential to get yourself and your work online. This will involve a small investment on your part, but if it gets you a job it’ll be worth it.
 
-When I get your CV the first thing I’m going to look for is your website. It also helps to have your own personal email address. An address like you@yourwebsite.com is going to make you look like the real deal, topbantz69@gmail.com (apologies if that’s you) isn’t.
+It also helps to have your own professional email address. An address like you@yourwebsite.com is going to make you look like the real deal, topbantz69@gmail.com isn’t… apologies if that’s you.
 
 Beyond this, there’s a ton of free ways to promote yourself online beyond your own website or social media channels:
 
