@@ -38,7 +38,7 @@ There’s a ton of free ways to promote yourself online beyond your own website,
 
 ## 2. Brand yourself
 
-How you look is going to make an impression with clients and employers, good or bad. 
+How you look is going to make an impression with clients and employers, good or bad.
 
 If you’ve followed step one you will probably know it’s a good idea to come up with some brand assets for yourself. Paying careful attention to your public facing content and any correspondence you send to potential clients and employers is absolutely key. 
 
@@ -62,7 +62,7 @@ If you promote yourself as an all-knowing design hero we will question you on it
 
 ## 4. Get some kit
 
-Easier said than done. But having your own hardware will help you greatly and if it's a laptop, even better. You may need to take it with you to freelance gigs, meetings and (hopefully) interviews. 
+Having your own hardware is a must and if it's a laptop, even better. You may need to take it with you to freelance gigs, meetings and (hopefully) interviews. 
 
 If you're doing freelance work for an agency, it's likely that most agencies will have a machine for you. But being pro-active and offering to bring your own kit will open up a few doors at the smaller agencies.
 
@@ -70,7 +70,7 @@ It’s very tempting to drop your life savings on a MacBook, but don’t forget 
 
 I won’t lie, the design industry is be very snobbish about hardware, especially Apple kit. Don’t be put off by this, I worked on a Windows machine in my previous job and it was great. If you work is good, it doesn’t matter what machine you did it on.
 
-However… you **must** be using the industry standard software and this means a subscription to Adobe Creative Cloud. 
+However… you **must** be using or have the ability to use industry standard software. This means a subscription to Adobe Creative Cloud. This will require a investment on your part. Don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable student rates.
 
 
 ## 5. Keep in contact with local agencies
