@@ -2,11 +2,27 @@
 layout: post
 title:  "Five tips for students and young designers"
 description: "A career in the design industry can be hard to begin with, here’s some handy advice get you ahead of the game"
-date:   2016-07-03 08:29:49
+date:   2017-07-03 08:29:49
 category: Advice
 ---
 
-Here’s something you may already know: getting a gig in the design industry is difficult. It’s a crowded market with employers looking for multi-disciplined creatives and standing out from the crowd can be difficult. At Vivid, we actively encourage applications and enquiries from students and graduates. Here’s a few tips on how get to get your foot in the door.
+Here’s something you may already know: getting a gig in the design industry is difficult. It’s a crowded market with employers looking for multi-disciplined creatives and standing out from the crowd can be difficult. At Vivid, we actively encourage applications and enquiries from students and graduates. So if that's you Here’s a few tips on how get to get your foot in the door.
+
+## 1. Get some kit
+
+Before you do anything you need some kit. Having your own hardware is a must and if it's a laptop, even better. You might need need to take it with you to freelance gigs, meetings, presentations and (hopefully) interviews. 
+
+If you're doing freelance work for an agency, it's likely that most studios will have a machine for you. But being able bring your own gear will definitely open up a few doors at smaller agencies.
+
+### Thinking different
+
+You could get a MacBook, but, you need think clever in this early stage of your career. It's easy to forget that you can get a very powerful Windows laptop for a quarter of the price. The difference in price will leave you plenty of budget for important things like software (see below), wireless peripherals (mouse etc.), business cards and travel.
+
+There's no getting away from it, the design industry is be very snobbish about hardware, especially Apple kit. Don’t be put off by this, I worked on a Windows machine in my previous position and it was great. If your work is good, it doesn’t matter what machine you did it on.
+
+### 
+
+You **must** be using or have the ability to use industry standard software. This means a subscription to Adobe Creative Cloud. This will require a investment on your part. Don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable student rates.
 
 ## 1. Develop an online presence
 
@@ -58,21 +74,11 @@ Agencies may fill up the job description with every skill in the book, but that�
 
 If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone books then stay in that world. There is time to develop your skill set as your career progresses.
 
-If you promote yourself as an all-knowing design hero we will question you on it and make you prove yourself. So be wary!
-
-## 4. Get some kit
-
-Having your own hardware is a must and if it's a laptop, even better. You may need to take it with you to freelance gigs, meetings and (hopefully) interviews. 
-
-If you're doing freelance work for an agency, it's likely that most agencies will have a machine for you. But being pro-active and offering to bring your own kit will open up a few doors at the smaller agencies.
-
-It’s very tempting to drop your life savings on a MacBook, but don’t forget that you can get a very powerful Windows laptop for a quarter of the price. Leaving you plenty of budget for things like software, wireless peripherals, business cards and coffee. 
-
-I won’t lie, the design industry is be very snobbish about hardware, especially Apple kit. Don’t be put off by this, I worked on a Windows machine in my previous job and it was great. If you work is good, it doesn’t matter what machine you did it on.
-
-However… you **must** be using or have the ability to use industry standard software. This means a subscription to Adobe Creative Cloud. This will require a investment on your part. Don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable student rates.
+If you promote yourself as an all-knowing design hero we will question you on it so be ready.
 
 
 ## 5. Keep in contact with local agencies
+
+
 
 ## 6. Prepare to be critiqued
