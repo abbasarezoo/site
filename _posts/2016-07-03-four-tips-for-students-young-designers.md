@@ -6,27 +6,27 @@ date:   2016-07-03 08:29:49
 category: Advice
 ---
 
-Here’s something you may already know: getting a gig in the design industry is tough. It’s a crowded market with employers looking for multi-disciplined creatives and standing out from the crowd can be difficult. At [Vivid](http://www.vividcreative.com/), we actively encourage applications and enquiries from students, graduates and designers who are new to the game. So if that's you, here’s a few tips on how get to get your foot in the door.
+Here’s something you may already know: getting a gig in the design industry is tough. It’s a crowded market with employers looking for multi-disciplined creatives, so standing out from the crowd can be difficult. At [Vivid](http://www.vividcreative.com/), we actively encourage applications and enquiries from students, graduates and designers who are new to the industry. So if that's you, here’s a few tips on how to get your foot in the door.
 
 ## 1. Get some kit
 
-Having your own hardware is a great idea. If it's a laptop, even better. You might need to take it with you to freelance gigs, meetings, presentations and interviews.
+Having your own hardware is a great idea. If it's a laptop, even better, as you might need to take it with you to meetings, presentations and interviews.
 
 If you're doing freelance work for an agency or an in-house team, it's highly likely that a machine will be available for you. But being able bring your own gear will definitely open up a few doors at smaller agencies and businesses.
 
 ### Think different
 
-If you're new to the game, money might be tight. For a quarter of the price of a MacBook, you could get a very powerful Windows machine. 
+If you're new to the game, money might be tight. It's down to you be intelligent about your budget. For a quarter of the price of a MacBook, you could get a very powerful Windows machine. 
 
 > Designing on a PC is no different to designing on a Mac. Yes, there was a time when Macs were more suited for designing with, but those days are long gone.
 
-It's down to you be intelligent about your budget. The gap between the price of Apple hardware and the alternatives is well documented. The difference could leave you plenty of budget for other important things like software, wireless peripherals, business cards, travel and booze (optional).
+The gap between the price of Apple hardware and the alternatives is well documented. The difference could leave you plenty of budget for other important things like software, wireless peripherals, business cards, travel and booze (optional).
 
 ### Meeting the standard 
 
 You **must** have access to industry standard software. If you’re developer, you’re lucky, most code editors are reasonably priced and some like [GitHub’s Atom editor](https://atom.io/) are free. 
 
-Designers: a subscription to Adobe Creative Cloud is essential to your future career in the industry and this means spending some cash. A full subscription may not be necessary and it’s worth exploring the options available to you. And don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable discounted packages.
+Designers: a subscription to Adobe Creative Cloud is essential to your future career in the industry, and this means spending some cash. A full subscription may not be necessary so it’s worth exploring the options available to you. And don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable discounted packages.
 
 > Top tip: you could grab older versions of Adobe Creative Suite from eBay for a reasonable price if you cannot stomach the monthly subscription fee for Creative Cloud.
 
@@ -40,7 +40,7 @@ Services like Squarespace and Wix can make the whole process a breeze if you’v
 
 It also helps to have your own professional email address. Your email address and your phone number are your two main points of contact. You can’t easily choose a nice looking phone number, but you can control the look of your email address.
 
-> An address like topbantz69@gmail.com might have felt like a good idea at the time, but it isn’t a great look when applying for jobs.
+> An email address like topbantz69@gmail.com might have felt like a good idea at the time, but it isn’t a great look when applying for jobs.
 
 ### Shout it from the rooftops
 
@@ -99,4 +99,4 @@ If you’ve studied computer science and are looking for a career in Ruby develo
 
 ## Bonus tip: love what you do
 
-We’re looking for a career designer, somebody who’
+We’re looking for somebody who wants a career in the industry, not just a job. You should love what you do and this should come through in your work, how your present yourself and your personality. Good luck!
