@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Four tips for students and young designers"
-description: "Forging career in the creative industries can be hard to begin with, here’s some handy advice get you ahead of the game"
+title:  "Four tips for aspiring designers and developers"
+description: "Starting a career in the creative industry can be hard to begin with, here’s some handy advice get you moving"
 date:   2016-07-03 08:29:49
 category: Advice
 ---
 
-Here’s something you may already know: getting a gig in the design industry is tough. It’s a crowded market with employers looking for multi-disciplined creatives, so standing out from the crowd can be difficult. At [Vivid](http://www.vividcreative.com/), we actively encourage applications and enquiries from students, graduates and designers who are new to the industry. So if that's you, here’s a few tips on how to get your foot in the door.
+Getting a gig in the creative industry is tough. It’s a crowded market with employers looking for multi-disciplined creatives, so standing out from the crowd can be difficult. At [Vivid](http://www.vividcreative.com/), we actively encourage applications and enquiries from students, graduates and developers who are new to the industry. So if that's you, here’s a few tips on how to get your foot in the door.
 
 ## 1. Get some kit
 
@@ -16,9 +16,9 @@ If you're doing freelance work for an agency or an in-house team, it's highly li
 
 ### Think different
 
-If you're new to the game, money might be tight. It's down to you be intelligent about your budget. For a quarter of the price of a MacBook, you could get a very powerful Windows machine. 
+If you're new to the game, money might be tight. It's down to you be intelligent about your budget. For a quarter of the price of a MacBook, you could get a very powerful Windows machine.
 
-> Designing on a PC is no different to designing on a Mac. Yes, there was a time when Macs were more suited for designing with, but those days are long gone.
+> Designing and developing on a PC is no different to working on a Mac. Yes, there was a time when Macs were more suited for designers, but those days are long gone.
 
 The gap between the price of Apple hardware and the alternatives is well documented. The difference could leave you plenty of budget for other important things like software, wireless peripherals, business cards, travel and booze (optional).
 
@@ -36,7 +36,7 @@ It’s essential to get yourself and your work online, this is where we go to fi
 
 ### Small investments, large payoffs
 
-Services like Squarespace and Wix can make the whole process a breeze if you’ve never written a line of code before. If you are a developer, you should absolutely develop your own site, I’ll see that as a weak spot if you didn’t. We will be looking at your source code so keep it clean.
+Paid-for services like [Squarespace](https://www.squarespace.com/) and [Wix](http://www.wix.com/) can make the whole process a breeze if you’ve never written a line of code before. If you are a developer, you should absolutely develop your own site, We will see it as a weak spot if you didn’t. We will be looking at your source code so keep it clean.
 
 It also helps to have your own professional email address. Your email address and your phone number are your two main points of contact. You can’t easily choose a nice looking phone number, but you can control the look of your email address.
 
@@ -66,8 +66,6 @@ There are a ton of free ways to promote yourself online beyond your own website.
 - Follow and interact with industry experts on Twitter
 - Leave constructive comments on articles and blog posts
 - Don’t be insulting - content you add to websites can be indexed on Google
-- Document your learning and working experiences by writing your own blog
-- Being able to write and talk confidently about your work will set you apart from the rest
 
 ## 3. Brand yourself
 
@@ -81,7 +79,7 @@ If you’ve followed step #2 you will know it’s a good idea to come up with so
 
 - Create a digital letterhead: Great for sending covering letters and proposals via emails
 - Build an email signature: Keep it simple, your name, logo, website and social media links will do
-- Be consistent - keep fonts, icons, colours, image treatments and type consistent across all media
+- Be consistent - keep fonts, icons, colours, image treatments and typography consistent across all media
 - Think about investing in a webfont licence from somewhere like Typekit or fonts.com
 - Google fonts are everywhere, going the extra mile for something more considered will get you noticed
 
@@ -93,9 +91,15 @@ Agencies tend to fill up a job description with every skill in the book, but tha
 
 ### Specialise and become an expert
 
-If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone books then stay in that world. There is time to develop your skill set as your career progresses.
+If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone books then stay in that world. There will be time to develop your skill set as your career progresses.
 
-> If you promote yourself as an all-knowing design hero we will question you on it so be ready.
+> If you promote yourself as an all-knowing hero we will question you on it so be ready.
+
+### Document it, or it never happened
+
+Documenting your learning and working experiences will help you become better at what you do. 
+
+Being able to describe what you do in a clear and confident manner will make you more attractive to potential employers. There are a few ways you can do this, be it posting informative tweets, writing blog posts or creating interesting code examples on Codepen or Github. And remember, the more content you post online, the easier it will be for potential employers to find you.
 
 ## Bonus tip: love what you do
 
