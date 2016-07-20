@@ -6,8 +6,8 @@
 </description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jul 2016 09:48:25 +0100</pubDate>
-    <lastBuildDate>Wed, 20 Jul 2016 09:48:25 +0100</lastBuildDate>
+    <pubDate>Wed, 20 Jul 2016 13:53:13 +0100</pubDate>
+    <lastBuildDate>Wed, 20 Jul 2016 13:53:13 +0100</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -32,7 +32,7 @@
 
 &lt;h3 id=&quot;meeting-the-standard&quot;&gt;Meeting the standard&lt;/h3&gt;
 
-&lt;p&gt;You &lt;strong&gt;must&lt;/strong&gt; have access to industry standard software. If you’re developer, you’re lucky, most code editors are reasonably priced and some like &lt;a href=&quot;https://atom.io/&quot;&gt;GitHub’s Atom editor&lt;/a&gt; are free.&lt;/p&gt;
+&lt;p&gt;You &lt;em&gt;must&lt;/em&gt; have access to industry standard software. If you’re developer, you’re lucky, most code editors are reasonably priced and some like &lt;a href=&quot;https://atom.io/&quot;&gt;GitHub’s Atom editor&lt;/a&gt; are free.&lt;/p&gt;
 
 &lt;p&gt;Designers: a subscription to Adobe Creative Cloud is essential to your future career in the industry, and this means spending some cash. A full subscription may not be necessary so it’s worth exploring the options available to you. And don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable discounted packages.&lt;/p&gt;
 
@@ -46,7 +46,7 @@
 
 &lt;h3 id=&quot;small-investments-large-payoffs&quot;&gt;Small investments, large payoffs&lt;/h3&gt;
 
-&lt;p&gt;Paid-for services like &lt;a href=&quot;https://www.squarespace.com/&quot;&gt;Squarespace&lt;/a&gt; and &lt;a href=&quot;http://www.wix.com/&quot;&gt;Wix&lt;/a&gt; can make the whole process a breeze if you’ve never written a line of code before. If you are a developer, you should absolutely develop your own site, We will see it as a weak spot if you didn’t. We will be looking at your source code so keep it clean.&lt;/p&gt;
+&lt;p&gt;Paid-for services like &lt;a href=&quot;https://www.squarespace.com/&quot;&gt;Squarespace&lt;/a&gt; and &lt;a href=&quot;http://www.wix.com/&quot;&gt;Wix&lt;/a&gt; can make the whole process a breeze if you’ve never written a line of code before. If you are a developer, you should absolutely develop your own site. We will see it as a weak spot if you didn’t. We will be looking at your source code so keep it clean.&lt;/p&gt;
 
 &lt;p&gt;It also helps to have your own professional email address. Your email address and your phone number are your two main points of contact. You can’t easily choose a nice looking phone number, but you can control the look of your email address.&lt;/p&gt;
 
@@ -61,20 +61,19 @@
 &lt;h4 id=&quot;designers&quot;&gt;Designers:&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Post your work on Behance, Tumblr, Dribbble and Pinterest&lt;/li&gt;
+  &lt;li&gt;Post your work on &lt;a href=&quot;https://www.behance.net/&quot;&gt;Behance&lt;/a&gt;, &lt;a href=&quot;https://www.tumblr.com/&quot;&gt;Tumblr&lt;/a&gt;, &lt;a href=&quot;https://dribbble.com/&quot;&gt;Dribbble&lt;/a&gt; and &lt;a href=&quot;https://www.pinterest.com&quot;&gt;Pinterest&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Share your work with friends on Facebook&lt;/li&gt;
-  &lt;li&gt;Create a PDF version of your portfolio and keep the file size low enough to email. Add a link to it on your website (see step #2)&lt;/li&gt;
-  &lt;li&gt;Email your PDF portfolio along with all the links to your work to local agencies&lt;/li&gt;
+  &lt;li&gt;Create a PDF version of your portfolio and keep the file size low enough to email&lt;/li&gt;
+  &lt;li&gt;Email your PDF portfolio along with all the links to your work to local agencies and companies&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;developers&quot;&gt;Developers:&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create prototypes and experiments on CodePen&lt;/li&gt;
-  &lt;li&gt;Create public GitHub repo where we can see your code&lt;/li&gt;
-  &lt;li&gt;Contribute to the web community on Stack Overflow and Quora&lt;/li&gt;
-  &lt;li&gt;Make all your experimental work publicly available&lt;/li&gt;
-  &lt;li&gt;Even if you think it has no use, for us, being able to see non-commercial work is handy&lt;/li&gt;
+  &lt;li&gt;Create prototypes and experiments on &lt;a href=&quot;http://codepen.io/&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Create public &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; repo where we can see your work&lt;/li&gt;
+  &lt;li&gt;Contribute to the web community on sites like &lt;a href=&quot;http://stackoverflow.com/&quot;&gt;Stack Overflow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Fork existing projects and try and improve them&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;everybody&quot;&gt;Everybody:&lt;/h4&gt;
@@ -95,7 +94,7 @@
   &lt;p&gt;Don’t forget, successfully branding yourself should be considered as a portfolio piece. You should be able to talk confidently about why and how you have branded yourself.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;key-things-to-remember&quot;&gt;Key things to remember:&lt;/h3&gt;
+&lt;h3 id=&quot;things-to-think-about&quot;&gt;Things to think about:&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Create a digital letterhead: Great for sending covering letters and proposals via emails&lt;/li&gt;
@@ -113,7 +112,7 @@
 
 &lt;h3 id=&quot;specialise-and-become-an-expert&quot;&gt;Specialise and become an expert&lt;/h3&gt;
 
-&lt;p&gt;If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone books then stay in that world. There will be time to develop your skill set as your career progresses.&lt;/p&gt;
+&lt;p&gt;If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone swatches then stay in that world. There will be time to develop your skill set as your career progresses, try not the be everything to everybody just yet.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;If you promote yourself as an all-knowing hero we will question you on it so be ready.&lt;/p&gt;
