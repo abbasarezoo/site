@@ -24,7 +24,7 @@ The gap between the price of Apple hardware and the alternatives is well documen
 
 ### Meeting the standard 
 
-You **must** have access to industry standard software. If you’re developer, you’re lucky, most code editors are reasonably priced and some like [GitHub’s Atom editor](https://atom.io/) are free. 
+You *must* have access to industry standard software. If you’re developer, you’re lucky, most code editors are reasonably priced and some like [GitHub’s Atom editor](https://atom.io/) are free. 
 
 Designers: a subscription to Adobe Creative Cloud is essential to your future career in the industry, and this means spending some cash. A full subscription may not be necessary so it’s worth exploring the options available to you. And don’t forget, if you’re still in college or University you can take advantage of Adobe’s favourable discounted packages.
 
@@ -36,7 +36,7 @@ It’s essential to get yourself and your work online, this is where we go to fi
 
 ### Small investments, large payoffs
 
-Paid-for services like [Squarespace](https://www.squarespace.com/) and [Wix](http://www.wix.com/) can make the whole process a breeze if you’ve never written a line of code before. If you are a developer, you should absolutely develop your own site, We will see it as a weak spot if you didn’t. We will be looking at your source code so keep it clean.
+Paid-for services like [Squarespace](https://www.squarespace.com/) and [Wix](http://www.wix.com/) can make the whole process a breeze if you’ve never written a line of code before. If you are a developer, you should absolutely develop your own site. We will see it as a weak spot if you didn’t. We will be looking at your source code so keep it clean.
 
 It also helps to have your own professional email address. Your email address and your phone number are your two main points of contact. You can’t easily choose a nice looking phone number, but you can control the look of your email address.
 
@@ -48,18 +48,17 @@ There are a ton of free ways to promote yourself online beyond your own website.
 
 #### Designers:
 
-- Post your work on Behance, Tumblr, Dribbble and Pinterest
+- Post your work on [Behance](https://www.behance.net/), [Tumblr](https://www.tumblr.com/), [Dribbble](https://dribbble.com/) and [Pinterest](https://www.pinterest.com)
 - Share your work with friends on Facebook
-- Create a PDF version of your portfolio and keep the file size low enough to email. Add a link to it on your website (see step #2)
-- Email your PDF portfolio along with all the links to your work to local agencies
+- Create a PDF version of your portfolio and keep the file size low enough to email
+- Email your PDF portfolio along with all the links to your work to local agencies and companies
 
 #### Developers:
 
-- Create prototypes and experiments on CodePen
-- Create public GitHub repo where we can see your code
-- Contribute to the web community on Stack Overflow and Quora
-- Make all your experimental work publicly available
-- Even if you think it has no use, for us, being able to see non-commercial work is handy
+- Create prototypes and experiments on [CodePen](http://codepen.io/)
+- Create public [GitHub](https://github.com/) repo where we can see your work
+- Contribute to the web community on sites like [Stack Overflow](http://stackoverflow.com/)
+- Fork existing projects and try and improve them
 
 #### Everybody:
 
@@ -75,7 +74,7 @@ If you’ve followed step #2 you will know it’s a good idea to come up with so
 
 > Don’t forget, successfully branding yourself should be considered as a portfolio piece. You should be able to talk confidently about why and how you have branded yourself.
 
-### Key things to remember:
+### Things to think about:
 
 - Create a digital letterhead: Great for sending covering letters and proposals via emails
 - Build an email signature: Keep it simple, your name, logo, website and social media links will do
@@ -91,7 +90,7 @@ Agencies tend to fill up a job description with every skill in the book, but tha
 
 ### Specialise and become an expert
 
-If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone books then stay in that world. There will be time to develop your skill set as your career progresses.
+If you’ve studied computer science and are looking for a career in Ruby development then focus on that. Don’t waste your time trying to level up your CSS skills. If you’re obsessed with print, inks, paper stocks and Pantone swatches then stay in that world. There will be time to develop your skill set as your career progresses, try not the be everything to everybody just yet.
 
 > If you promote yourself as an all-knowing hero we will question you on it so be ready.
 
