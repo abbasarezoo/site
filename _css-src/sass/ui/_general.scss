@@ -168,8 +168,7 @@
 }
 
 @mixin heading($font-size, $color) {
-  font-family: "NeuzeitOffSoftRoundW01-_710333";
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: $kern;
   color: $color;
 

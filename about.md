@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-Hello there I'm Abbas Arezoo, Digital Creative Manager and Lead Developer at Vivid Creative. My role is to lead and oversee all digital creative projects, working closely with our internal design and development teams. I work with a range of clients from start-ups to established global brands.
+Hello there I'm Abbas Arezoo, Digital Creative Manager at Vivid Creative. My role is to lead and oversee all digital creative projects, working closely with our internal design and development teams. I work with a range of clients from start-ups to established global brands.
 
 ## Skills to pay the bills
 
