@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             
             dist: {
                 files: {
-                    '_css-src/styles/style.css': '_css-src/sass/style.scss'
+                    'style.css': '_css-src/style.scss'
                 }
             }
 
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 
                 map: {
                     inline: false, // save all sourcemaps as separate files...
-                    annotation: '_css-src/styles/' // ...to the specified directory
+                    annotation: '' // ...to the specified directory
                 },
 
                 processors: [
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                 },
 
                 dist: {
-                    src: '_css-src/styles/*.css'
+                    src: '*.css'
                 }
 
         },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 
             compile: {
                 files: {
-                    'scripts/main.min.js': ['_js-src/uncompressed/*.js']
+                    'main.min.js': ['_js-src/*.js']
                 }
             }
 
@@ -62,35 +62,11 @@ module.exports = function(grunt) {
             optimise: {
                 files: [{
                     expand: true,
-                    cwd: '_img-src/uncompressed',
+                    cwd: '_img-src',
                     src: ['*.{png,jpg,gif,svg}'],
                     dest: 'images'
                 }]
             }
-
-        },
-
-        // COPY
-
-        copy: {
-
-            css: {
-                files: [
-                  {expand: true, flatten: true, src: ['_css-src/styles/*'], dest: 'css/', filter: 'isFile'}
-                ],
-            },
-
-            img: {
-                files: [
-                  {expand: true, flatten: true, src: ['_img-src/*'], dest: 'www/wp-content/themes/vivid/images/', filter: 'isFile'}
-                ],
-            },
-
-            js: {
-                files: [
-                  {expand: true, flatten: true, src: ['_js-src/*'], dest: 'www/wp-content/themes/vivid/scripts/', filter: 'isFile'}
-                ],
-            },
 
         },
 
@@ -117,8 +93,8 @@ module.exports = function(grunt) {
 
             html: {
 
-                files: ['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md', '*.md'],
-                tasks: ['shell:jekyll_build'],
+                files: ['index.html', '_layouts/*.html', '_includes/*.html', '_posts/*.md', '*.md', '*.html'],
+                tasks: ['build'],
                     options: {
                         spawn: false,
                         livereload:35729,
@@ -129,7 +105,7 @@ module.exports = function(grunt) {
 
             css: {
 
-                files: ['_css-src/sass/**/*.scss'],
+                files: ['_css-src/**/*.scss'],
                 tasks: ['css', 'shell:jekyll_build'],
                     options: {
                         spawn: false,
@@ -141,7 +117,7 @@ module.exports = function(grunt) {
 
             js: {
 
-                files: ['_js-src/uncompressed/*.js'],
+                files: ['_js-src/*.js'],
                 tasks: ['js', 'shell:jekyll_build'],
                     options: {
                         spawn: false,
@@ -153,7 +129,7 @@ module.exports = function(grunt) {
 
             img: {
 
-                files: ['_img-src/uncompressed/**'],
+                files: ['_img-src/**'],
                 tasks: ['img', 'shell:jekyll_build'],
                     options: {
                         spawn: false,
@@ -179,10 +155,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-shell');
 
-    grunt.registerTask('css', ['sass', 'postcss', 'copy:css']);
-    grunt.registerTask('js', ['uglify', 'copy:js']);
-    grunt.registerTask('img', ['imagemin', 'copy:img']);
-    grunt.registerTask('move', ['copy']);
+    grunt.registerTask('css', ['sass', 'postcss']);
+    grunt.registerTask('js', ['uglify']);
+    grunt.registerTask('img', ['imagemin']);
+    grunt.registerTask('build', ['shell:jekyll_build']);
 
 
 };

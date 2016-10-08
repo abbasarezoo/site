@@ -1,0 +1,108 @@
+// =================================================
+// HOMEPAGE STYLES
+// =================================================
+
+// Layout
+
+.site-intro {
+    padding: $gutter*2 0 $gutter;
+
+    color: $dark-grey;
+
+    background-color: $light-grey;
+
+        @include mq(md) {
+            padding: $gutter*4 0 $gutter*1.5;
+        }
+
+        h1 {
+            @include font-size($ft-4);
+
+                @include mq(sm) {
+                    @include font-size($ft-2);
+                }
+
+                @include mq(lg) {
+                    @include font-size($ft-1);
+                }
+
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+
+                @include hover-state {
+                    color: $orange;
+                }
+
+        }
+
+}
+
+// Post list
+
+.post-list {
+    @extend %clearfix;
+
+    list-style-type: none;
+
+    display: block;
+    width: 100%;
+
+}
+
+.post-item {
+
+    @for $i from 1 through $colors-length {
+        
+        &:nth-of-type(#{$colors-length}n+#{$i}) {
+
+            .post-link {
+                color: nth($colors, $i);
+
+                transition: all 0.25s;
+
+                    @include hover-state {
+                        color: $white;
+
+                        background-color: nth($colors, $i);
+                    }
+
+            }
+
+        }
+
+    }
+
+}
+
+.post-link {
+    display: block;
+    width: 100%;
+    padding: $gutter 0;
+
+    text-decoration: none;
+
+        @include mq(md) {
+            padding: $gutter*1.5 0;
+        }
+
+        h2 {
+            margin: 0 0 $gutter/2;
+
+            line-height: $hlh;
+            
+            @include font-size($ft-5);
+
+                @include mq(lg) {
+                    @include font-size($ft-2);
+                }
+
+        }
+
+        p {
+            @include font-size($ft-7);
+        }
+
+}

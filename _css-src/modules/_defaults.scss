@@ -1,0 +1,43 @@
+// =================================================
+// GLOBAL
+// =================================================
+
+html {
+    font-size: 57.5%;
+        
+        @include mq(sm) {
+            font-size: 62.5%;
+        }
+        
+}
+
+body {
+    height: 100% !important;
+}
+
+// =================================================
+// FONT RESET
+// =================================================
+
+body,
+input,
+select,
+option,
+button,
+textarea {
+    font-family: $primary-font;
+    color: $dark-grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+code {
+    font-family: $code-font;
+}

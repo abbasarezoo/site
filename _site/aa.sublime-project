@@ -2,7 +2,16 @@
 	"folders":
 	[
 		{
-			"path": "_css-src/sass"
+			"path": "."
+		},
+		{
+			"path": "_css-src"
+		},
+		{
+			"path": "_includes"
+		},
+		{
+			"path": "_layouts"
 		}
 	]
 }

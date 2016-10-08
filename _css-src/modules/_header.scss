@@ -1,0 +1,44 @@
+// =================================================
+// HEADER
+// =================================================
+
+.pg-header--outer {
+    background-color: $light-grey;
+}
+
+.pg-header {
+    height: 8rem;
+    padding: 2rem 0;
+
+}
+
+.logo {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+
+        i, svg {
+            width: inherit;
+            height: inherit;
+        }
+
+        svg {
+            fill: $white;
+            transition: all 0.25s;
+        }
+
+        @include hover-state {
+            
+            svg {
+                fill: $orange;
+            }
+
+        }
+
+}
+
+.main-nav {
+}
+
+.main-nav--list {
+}

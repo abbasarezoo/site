@@ -1,8 +1,7 @@
 # Site settings
 title: Abbas Arezoo - Digital Creative Manager
 email: abbas@abbasarezoo.co.uk
-description: > # this means to ignore newlines until "baseurl:"
-  Hello, I'm Abbas Arezoo. I design and build websites and web based applications. I'm Digital Creative Manager @ Vivid.
+description: Hello, I'm Abbas Arezoo. I design and build websites and web based applications. I'm Digital Creative Manager @ Vivid.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.abbasarezoo.com" # the base hostname & protocol for your site
 twitter_username: DesignSheffield
@@ -18,9 +17,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Gruntfile.js
-  - node_modules/
+  - node_modules
+  - CNAME
   - package.json
-  - _css-src/
-  - _js-src/
+  - _css-src
+  - _js-src
+  - _img-src
   - aajekyll.sublime-project
   - aajekyll.sublime-workspace
+  - form-info.txt

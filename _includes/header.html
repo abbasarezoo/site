@@ -1,16 +1,33 @@
 <div class="pg-header--outer">
-	<header class="pg-header">
-	    <a class="logo" href="{{ site.baseurl }}/">
-	    	<i>
-				<svg viewBox="0 0 1024 1024">
-					<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/images/vectors.svg#icon--aa"></use>
-				</svg>
-			</i>
-	    </a>
-		<a class="toggle--main-nav" href="#">
-			<span class="burger"></span>
-			<span class="burger"></span>
-			<span class="burger"></span>
-		</a>
-	</header>
+	<div class="container">
+		<div class="row">
+			<header class="pg-header">
+				<div class="col-md-2">
+				    <a class="logo" href="{{ site.baseurl }}/">
+				    	<i>
+							<svg viewBox="0 0 1024 1024">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/images/vectors.svg#icon--aa"></use>
+							</svg>
+						</i>
+				    </a>
+				</div>
+				<div class="col-md-2">
+				    <nav class="main-nav">
+						<ul class="main-nav--list">
+							<li>
+								<a href="{{ site.baseurl }}/">Blog</a>
+							</li>
+							{% for page in site.pages %}
+						    {% if page.title %}
+						    <li>
+						        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+						    </li>
+						    {% endif %}
+						    {% endfor %}
+						</ul>
+					</nav>
+				</div>
+			</header>
+		</div>
+	</div>
 </div>
