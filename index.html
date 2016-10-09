@@ -3,29 +3,34 @@ layout: default
 ---
 
 <header class="site-intro">
-  <div class="container">
-    <div class="row">
-      <div class="col-xxs-4">
-  <h1>I'm Abbas Arezoo, Digital Creative Manager at <a href="http://www.vividcreative.com">Vivid</a></h1>
-  </div>
-  </div>
-  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4">
+				<h1>
+					Hello I'm Abbas, Digital Creative Manager at
+					<a href="http://www.vividcreative.com" target="_blank">Vivid</a>
+				</h1>
+			</div>
+		</div>
+	</div>
 </header>
 <div class="post-list--outer">
-  <ol class="post-list">
-    {% for post in site.posts %}
-      <li class="post-item">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-4">
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.categories | join: ' ' | capitalize }} / {{ post.date | date: "%d.%m.%y" }}</p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-    {% endfor %}
-  </ol>
+	<ol class="post-list">
+		{% for post in site.posts %}
+		<li class="post-item">
+			<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4">
+							<h2>{{ post.title }}</h2>
+							<p>
+								{{ post.categories | join: ' ' | capitalize }} / {{ post.date | date: "%d.%m.%y" }}
+							</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ol>
 </div>

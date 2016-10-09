@@ -6,10 +6,18 @@
 
 .site-intro {
     padding: $gutter*2 0 $gutter;
+    margin: 0 0 $gutter/2;
 
     color: $dark-grey;
+    text-align: center;
 
     background-color: $light-grey;
+
+        @include mq(sm) {
+            margin: 0;
+
+            text-align: left;
+        }
 
         @include mq(md) {
             padding: $gutter*4 0 $gutter*1.5;
@@ -80,9 +88,13 @@
 .post-link {
     display: block;
     width: 100%;
-    padding: $gutter 0;
+    padding: $gutter/2 0;
 
     text-decoration: none;
+
+        @include mq(sm) {
+            padding: $gutter 0;
+        }
 
         @include mq(md) {
             padding: $gutter*1.5 0;

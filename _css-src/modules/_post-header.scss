@@ -1,0 +1,85 @@
+// =================================================
+// POST HEADER
+// =================================================
+
+.post-header {
+    position: relative;
+    height: calc(100vh - 12rem);
+
+    text-align: center;
+
+    background-color: $light-grey;
+
+        @include mq(sm) {
+            height: calc(100vh - 9rem);
+        }
+
+        span {
+            position: absolute;
+            bottom: 4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+
+            @include font-size($ft-4);
+        }
+
+        > .container,
+        > .container .row,
+        > .container .col-md-4 {
+            height: 100%;
+        }
+
+}
+
+.post-meta {
+    margin: 0 0 $gutter;
+
+    @include font-size($ft-7);
+}
+
+.post-header--content {
+    @extend %center;
+
+    width: 100%;
+    padding: 0 0 9rem;
+
+        @include mq(sm) {
+            width: 75%;
+        }
+
+        @include mq(lg) {
+            width: 50%;
+        }
+
+}
+
+.post-title {
+    margin: 0 0 $gutter;
+
+    color: $orange;
+
+    @include font-size($ft-3);
+
+        @include mq(sm) {
+            @include font-size($ft-1);
+        }
+        
+}
+
+.post-desc {
+    line-height: $blh;
+    
+    @include font-size($ft-6);        
+}
+
+.post-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $gutter/2;
+
+        @include mq(sm) {
+            padding: 0 $gutter;
+        }
+
+}

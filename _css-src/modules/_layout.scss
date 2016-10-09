@@ -76,7 +76,6 @@ $xxs: 400px !default;
   position: relative;
   min-height: 1px;
   padding: 0 $gutter/4;
-  float: left;
   
   @include mq(sm) {
     padding: 0 $gutter/2;
@@ -96,6 +95,7 @@ $xxs: 400px !default;
   @if ($type == width) and ($index > 0) {
     .col-#{$class}-#{$index} {
       width: percentage(($index / $columns));
+      float: left;
     }
   }
 }

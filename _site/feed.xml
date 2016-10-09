@@ -5,9 +5,44 @@
     <description>Hello, I&#39;m Abbas Arezoo. I design and build websites and web based applications. I&#39;m Digital Creative Manager @ Vivid.</description>
     <link>http://www.abbasarezoo.com/</link>
     <atom:link href="http://www.abbasarezoo.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 08 Oct 2016 21:38:51 +0100</pubDate>
-    <lastBuildDate>Sat, 08 Oct 2016 21:38:51 +0100</lastBuildDate>
+    <pubDate>Sun, 09 Oct 2016 11:38:12 +0100</pubDate>
+    <lastBuildDate>Sun, 09 Oct 2016 11:38:12 +0100</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Have you got a sec?</title>
+        <description>&lt;p&gt;INTRO&lt;/p&gt;
+
+&lt;p&gt;Have you got a sec? Can I borrow you for a sec? I must ask these questions so many times during on a normal day. Followed by a question about Javascript or PHP or why I can’t do something with Git.&lt;/p&gt;
+
+&lt;p&gt;SELF-TAUGHT&lt;/p&gt;
+
+&lt;p&gt;A few years ago had a chat with a director at a successful design agency. The conversation circled around the idea that a web designer couldn’t do everything. He rightly proposed the concept that a web designer should at least have a working knowledge of HTML and CSS. But, in order for the designer to be truly creative, they should be free of the constraints scripting and programming, meaning no need to write Javascript or back-end code. I agreed. However, when web design became my actual job I found out we were both wrong.&lt;/p&gt;
+
+&lt;p&gt;In my early years at Vivid. Sites were going live looking and functioning differently to how I’d designed them. Because we traditionally worked in silos, there was no collaboration and designs were handed off and that was that. I needed even more creative control, so before we began to design sites I began to ask questions. Which almost always began with the classic “have you got a sec?”.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What plugin are we using for this module? Are there any others that give us more creative control?&lt;/li&gt;
+  &lt;li&gt;If something looks markedly different to the designs can you flag it as soon as possible?&lt;/li&gt;
+  &lt;li&gt;I want this to happen when a user clicks that, is this possible? Shall I write it?&lt;/li&gt;
+  &lt;li&gt;I’ve tried to do this, but it’s not quite working, could you take a look?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not only did asking questions make the team collaborate more,  I also began to influence the final output a lot more. Ultimately, I learned a hell of a lot on the way.&lt;/p&gt;
+
+&lt;p&gt;The common thread that links all of this are questions like “have you got a sec?”. I’ve learned some much from little five minute chats, mini tutorials and ad-hoc hack sessions that I can  build a pretty good CMS, from design to deployment.&lt;/p&gt;
+
+&lt;p&gt;So I would now completely disagree with my friends assumption.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 09 Oct 2016 09:29:49 +0100</pubDate>
+        <link>http://www.abbasarezoo.com/thoughts/2016/10/09/have-you-got-a-sec.html</link>
+        <guid isPermaLink="true">http://www.abbasarezoo.com/thoughts/2016/10/09/have-you-got-a-sec.html</guid>
+        
+        
+        <category>Thoughts</category>
+        
+      </item>
     
       <item>
         <title>Four tips for aspiring designers and developers</title>

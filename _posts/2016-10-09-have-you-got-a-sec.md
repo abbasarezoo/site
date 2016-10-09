@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  “Have you got a sec?”
-description: “The best way to learn.”
-date:   2016-12-25 08:29:49
+title:  "Have you got a sec?"
+description: "The best way to learn."
+date:   2016-10-09 08:29:49
 category: Thoughts
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Success
+exclude: true
 permalink: /success/
 ---
 
