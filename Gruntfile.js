@@ -158,7 +158,7 @@ module.exports = function(grunt) {
     grunt.registerTask('css', ['sass', 'postcss']);
     grunt.registerTask('js', ['uglify']);
     grunt.registerTask('img', ['imagemin']);
-    grunt.registerTask('build', ['shell:jekyll_build']);
+    grunt.registerTask('build', ['sass', 'postcss', 'uglify', 'imagemin', 'shell:jekyll_build']);
 
 
 };

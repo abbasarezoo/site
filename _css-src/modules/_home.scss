@@ -5,7 +5,7 @@
 // Layout
 
 .site-intro {
-    padding: $gutter*2 0 $gutter;
+    padding: $gutter*5 0 $gutter;
     margin: 0 0 $gutter/2;
 
     color: $dark-grey;
@@ -20,7 +20,7 @@
         }
 
         @include mq(md) {
-            padding: $gutter*4 0 $gutter*1.5;
+            padding: $gutter*8 0 $gutter*1.5;
         }
 
         h1 {

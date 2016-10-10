@@ -1,5 +1,5 @@
 {
-  "name": "mountain-tracks",
+  "name": "aadotcom",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -12,6 +12,15 @@
     "grunt-jekyll": "^0.4.3",
     "grunt-notify": "^0.4.1",
     "grunt-sass": "^1.1.0",
-    "grunt-shell": "^1.1.2"
+    "grunt-shell": "^1.1.2",
+    "postcss-value-parser": "^3.2.3",
+    "normalize-range": "^0.1.2",
+    "coffee-script": "1.10.0",
+    "num2fraction": "^1.2.2",
+    "browserslist": "~1.3.2",
+    "caniuse-db": "^1.0.30000471",
+    "postcss": "^5.0.21",
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.3.1"
   }
 }

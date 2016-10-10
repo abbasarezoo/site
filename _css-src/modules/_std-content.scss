@@ -60,7 +60,7 @@
                 border-radius: $rad;
                 background-color: $light-grey;
 
-                color: $dark-teal;
+                color: $dark-grey;
 
                 @include font-size($ft-7);
             }
@@ -98,11 +98,12 @@
     pre {
         overflow-x: scroll;
 
+        padding: $gutter;
         margin: $gutter 0 $gutter;
 
         background-color: $light-grey;
 
-        color: $dark-teal;
+        color: $dark-grey;
 
         @include font-size($ft-7);
 
@@ -122,6 +123,10 @@
                 color: $orange;
             }
 
+    }
+
+    a {
+        text-decoration: none;
     }
 
 

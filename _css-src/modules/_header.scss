@@ -3,7 +3,12 @@
 // =================================================
 
 .pg-header--outer {
-    background-color: $light-grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    width: 100%;
 }
 
 .pg-header {
