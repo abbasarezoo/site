@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using Grunt with a front-end project for the first time"
-description: "This is beginner's guide to setting up a project using the popular task runner and a simple directory setup"
+description: "This is a beginner's guide to setting up a project using the popular task runner"
 date:   2016-06-21 08:29:49
 category: Skills
 ---

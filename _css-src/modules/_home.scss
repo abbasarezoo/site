@@ -72,9 +72,9 @@
                 transition: all 0.25s;
 
                     @include hover-state {
-                        color: $white;
+                        color: darken(nth($colors, $i), 10%);
 
-                        background-color: nth($colors, $i);
+                        background-color: lighten(nth($colors, $i), 44%);
                     }
 
             }
@@ -114,7 +114,7 @@
         }
 
         p {
-            @include font-size($ft-7);
+            @include font-size($ft-6);
         }
 
 }

@@ -65,9 +65,9 @@
 
         li {
             display: inline-block;
-            margin: 0 $gutter/2;
+            margin: 0 $gutter/4;
 
-            @include font-size($ft-7);
+            @include font-size($ft-6);
 
                 @include mq(sm) {
                     margin: 0 $gutter/2 0 0;
@@ -75,10 +75,6 @@
 
                 @include mq(md) {
                     margin: 0 $gutter 0 0;
-                }
-
-                @include mq(md) {
-                    @include font-size($ft-6);
                 }
 
         }

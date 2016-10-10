@@ -41,12 +41,12 @@
         @include font-size($ft-6)
 
             a {
-                color: $dark-grey;
+                color: $orange;
 
                     @include mq(md) {
                         
                         &:hover {
-                            color: $orange;
+                            text-decoration: underline;
                         }
 
                     }
@@ -55,10 +55,11 @@
 
             code {
                 display: inline-block;
+                margin: 0 0.5rem;
                 padding: 0.5rem;
 
                 border-radius: $rad;
-                background-color: $light-grey;
+                background-color: $lightest-grey;
 
                 color: $dark-grey;
 
@@ -73,8 +74,8 @@
     }
 
     em {
+        font-style: normal;
         color: $dark-grey;
-        font-style: italic;
 
             a {
 
@@ -101,7 +102,7 @@
         padding: $gutter;
         margin: $gutter 0 $gutter;
 
-        background-color: $light-grey;
+        background-color: $lightest-grey;
 
         color: $dark-grey;
 
@@ -117,7 +118,7 @@
         margin: $gutter 0;
         padding: 0.5rem $gutter;
 
-        background-color: $light-grey;
+        background-color: $lightest-grey;
 
             p {
                 color: $orange;

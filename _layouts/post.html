@@ -1,24 +1,28 @@
 ---
 layout: default
 ---
-<div class="post">
-	 <header class="post-header">
-		<div class="container">
-	  		<div class="row">
-			  	<div class="col-md-4">
-				  	<div class="post-header--content">
-				  		<p class="post-meta">{{ page.date | date: "%d.%m.%y" }}</p>
-				    	<h1 class="post-title">{{ page.title }}</h1>
-				    	<h2 class="post-desc">{{ page.description }}</h2>
-					</div>
-					<span>&darr;</span>
+ <header class="post-header">
+	<div class="container">
+  		<div class="row">
+		  	<div class="col-md-4">
+			  	<div class="post-header--content">
+			  		<p class="post-meta">{{ page.date | date: "%d.%m.%y" }}</p>
+			    	<h1 class="post-title">{{ page.title }}</h1>
+			    	<h2 class="post-desc">{{ page.description }}</h2>
 				</div>
+				<span>&darr;</span>
 			</div>
 		</div>
-	</header>
-	<article class="post-content">
-		<div class="std-content">
-			{{ content }}
+	</div>
+</header>
+<div class="post">
+	<article class="std-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					{{ content }}
+				</div>
+			</div>
 		</div>
 	</article>
 </div>
