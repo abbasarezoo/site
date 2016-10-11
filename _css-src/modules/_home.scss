@@ -24,9 +24,12 @@
         }
 
         h1 {
+            line-height: $hlh;
+
             @include font-size($ft-4);
 
                 @include mq(sm) {
+                    padding: 0 25% 0 0;
                     @include font-size($ft-2);
                 }
 
@@ -88,15 +91,11 @@
 .post-link {
     display: block;
     width: 100%;
-    padding: $gutter/2 0;
+    padding: $gutter 0;
 
     text-decoration: none;
 
-        @include mq(sm) {
-            padding: $gutter 0;
-        }
-
-        @include mq(md) {
+        @include mq(lg) {
             padding: $gutter*1.5 0;
         }
 

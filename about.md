@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About me
+alt_title: This is who I am
 permalink: /about/
 ---
 

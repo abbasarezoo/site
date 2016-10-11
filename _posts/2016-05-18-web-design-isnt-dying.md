@@ -4,6 +4,7 @@ title:  "Web design isn't dead, but the term is dying"
 description: "A website isn't just pages of code and images rendered in the browser. It forms a small part of a larger digital strategy."
 date:   2016-05-18 20:29:49
 category: Thoughts
+post_style: red
 ---
 
 When I first started designing websites, you designed and built a website and that was that. There was little thought for SEO, performance and mobile user experience. Smartphones didn’t exist. Getting online with the phones that could access the web was excruciating. Responsive web design was a long way off and big social media was in its infancy. Advances in technology allow us to solve these challenges with digital strategy, of which digital design is a part of.

@@ -1,0 +1,72 @@
+// =================================================
+// FORM STYLES
+// =================================================
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+textarea {
+    border: 1px solid $dark-grey;
+
+    color: $mid-grey;
+
+    @include font-size($ft-6);
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel] {
+    width: 100%;
+    height: 5rem;
+    padding: 0 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 15rem;
+    padding: 1rem;
+}
+
+.form-row {
+    margin: 0 0 $gutter;
+
+        p {
+            margin: 0 0 $gutter/2;
+
+            @include font-size($ft-6);
+        }
+
+}
+
+.checkbox-outer {
+    cursor: pointer;
+        
+        input {
+            display: none;
+        }
+
+}
+
+.checkbox {
+    width: 3rem;
+    height: 3rem;
+
+    line-height: 3rem;
+    text-align: center;
+
+    border: 1px solid $dark-grey;
+}
+
+.checkbox span {
+    display: none;
+
+    color: $green;
+
+    @include font-size($ft-5);
+}
+
+label input:checked + .checkbox span {
+    display: block;
+}
