@@ -72,9 +72,9 @@
                 transition: all 0.25s;
 
                     @include hover-state {
-                        color: darken(nth($colors, $i), 10%);
+                        color: darken(nth($colors, $i), 5%);
 
-                        background-color: lighten(nth($colors, $i), 44%);
+                        background-color: rgba(nth($colors, $i), 0.1);
                     }
 
             }

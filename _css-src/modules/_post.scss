@@ -2,6 +2,18 @@
 // POST HEADER
 // =================================================
 
+@keyframes arrow-pulse {
+    
+    20% {
+        bottom: 6rem;
+    }
+
+    50% {
+        bottom: 6rem;
+    }
+
+}
+
 .post-header {
     position: relative;
     height: 100vh;
@@ -21,7 +33,9 @@
 
             transform: translateX(-50%);
 
-            color: $white;
+            color: $orange;
+
+            animation: arrow-pulse 2s infinite;
 
             @include font-size($ft-4);
 
