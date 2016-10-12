@@ -2,12 +2,14 @@
 // FORM STYLES
 // =================================================
 
+// Shared field styles
+
 input[type=text],
 input[type=email],
 input[type=password],
 input[type=tel],
 textarea {
-    border: 1px solid $dark-grey;
+    border: 1px solid $mid-grey;
 
     color: $mid-grey;
 
@@ -25,9 +27,11 @@ input[type=tel] {
 
 textarea {
     width: 100%;
-    height: 15rem;
+    height: 20rem;
     padding: 1rem;
 }
+
+// Form layout
 
 .form-row {
     margin: 0 0 $gutter;
@@ -39,6 +43,8 @@ textarea {
         }
 
 }
+
+// Checkbox replacement styles
 
 .checkbox-outer {
     cursor: pointer;
@@ -56,7 +62,7 @@ textarea {
     line-height: 3rem;
     text-align: center;
 
-    border: 1px solid $dark-grey;
+    border: 1px solid $mid-grey;
 }
 
 .checkbox span {
@@ -70,3 +76,128 @@ textarea {
 label input:checked + .checkbox span {
     display: block;
 }
+
+// Select replacement styles
+
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+
+  border: 1px solid $mid-grey;
+
+  color: $dark-grey;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem 5rem 1.5rem 1rem;
+
+  line-height: 1.5;
+  color: $dark-grey;
+
+  background-color: $white;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+    @include font-size($ft-7);
+}
+
+/* Undo the Firefox inner focus ring */
+.select select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+/* Dropdown arrow */
+.select:after {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: -.15rem;
+  pointer-events: none;
+  border-top: .5rem solid;
+  border-right: .5rem solid transparent;
+  border-bottom: .5rem solid transparent;
+  border-left: .5rem solid transparent;
+}
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.select select:hover {
+  background-color: #ddd;
+}
+*/
+
+/* Focus */
+.select select:focus {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+}
+
+/* Active/open */
+.select select:active {
+  color: $white;
+  background-color: $dark-grey;
+}
+
+/* Hide the arrow in IE10 and up */
+.select select::-ms-expand {
+  display: none;
+}
+
+/* Media query to target Firefox only */
+@-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
+  .select select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem;
+  }
+
+  /* <option> elements inherit styles from <select>, so reset them. */
+  .select option {
+    background-color: white;
+  }
+}
+
+/* IE9 hack to hide the arrow */
+@media screen and (min-width:0\0) {
+  .select select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem;
+  }
+  .select:after {
+    z-index: 5;
+  }
+  .select:before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: $white;
+  }
+  .select select:hover,
+  .select select:focus,
+  .select select:active {
+    color: #555;
+    background-color: $white;
+  }
+}
+
+
+
+
