@@ -21,7 +21,8 @@ permalink: /contact/
 			<label class="checkbox-outer">
 			<input type="checkbox" name="project" />
 			<div class="checkbox">
-				<span>&#10005;</span>
+				<span>Yes</span>
+				<i>&#10005;</i>
 			</div>
 			</label>
 		</div>

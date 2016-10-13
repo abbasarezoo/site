@@ -65,7 +65,7 @@ textarea {
     border: 1px solid $mid-grey;
 }
 
-.checkbox span {
+.checkbox i {
     display: none;
 
     color: $green;
@@ -73,7 +73,7 @@ textarea {
     @include font-size($ft-5);
 }
 
-label input:checked + .checkbox span {
+label input:checked + .checkbox i {
     display: block;
 }
 
@@ -89,13 +89,15 @@ label input:checked + .checkbox span {
 
   color: $dark-grey;
 }
+
 .select select {
   display: inline-block;
   width: 100%;
+  height: 5rem;
   margin: 0;
-  padding: 1.5rem 5rem 1.5rem 1rem;
+  padding: 0 5rem 0 1rem;
 
-  line-height: 1.5;
+  line-height: 5rem;
   color: $dark-grey;
 
   background-color: $white;
