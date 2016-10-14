@@ -1,5 +1,5 @@
 ---
-layout: contact
+layout: form
 title: Contact
 alt_title: Let's get to work
 permalink: /contact/
@@ -21,13 +21,13 @@ permalink: /contact/
 			<label class="checkbox-outer">
 			<input type="checkbox" name="project" />
 			<div class="checkbox">
-				<span>Yes</span>
-				<i>&#10005;</i>
+				<p>Yes</p>
+				<i><span>&#10005;</span></i>
 			</div>
 			</label>
 		</div>
 		<div class="form-row">
-			<p>Could you give me an estimate of your budget?</p>
+			<p>If that was a yes, could you give me an estimate of your budget?</p>
 			<div class="select">
 				<select name="budget">
 					<option value="None yet">I don't have one yet</option>

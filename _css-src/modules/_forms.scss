@@ -36,7 +36,7 @@ textarea {
 .form-row {
     margin: 0 0 $gutter;
 
-        p {
+        > p {
             margin: 0 0 $gutter/2;
 
             @include font-size($ft-6);
@@ -47,6 +47,9 @@ textarea {
 // Checkbox replacement styles
 
 .checkbox-outer {
+		display: block;
+		height: 3rem;
+
     cursor: pointer;
         
         input {
@@ -56,29 +59,46 @@ textarea {
 }
 
 .checkbox {
-    width: 3rem;
-    height: 3rem;
+		height: 3rem;
 
-    line-height: 3rem;
-    text-align: center;
+			 p {
+			 		display: block;
+			 		height: 3rem;
+			 		margin: 0 1rem 0 0;
+			 		float: left;
 
-    border: 1px solid $mid-grey;
+			 		line-height: 3rem;
+
+			 		@include font-size($ft-7);
+			 }
+
+			 i {
+			    width: 3rem;
+			    height: 3rem;
+			    float: left;
+
+			    line-height: 3rem;
+			    text-align: center;
+
+			    border: 1px solid $mid-grey;
+			}
+
 }
 
-.checkbox i {
+.checkbox i span {
     display: none;
 
+    font-style: normal;
     color: $green;
 
-    @include font-size($ft-5);
+    @include font-size($ft-7);
 }
 
-label input:checked + .checkbox i {
+label input:checked + .checkbox i span {
     display: block;
 }
 
-// Select replacement styles
-
+// Select replacement styles - taken from wtfforms.com
 
 .select {
   position: relative;
@@ -133,13 +153,6 @@ label input:checked + .checkbox i {
   border-bottom: .5rem solid transparent;
   border-left: .5rem solid transparent;
 }
-
-/* Hover state */
-/* Uncomment if you need it, but be aware of the sticky iOS states.
-.select select:hover {
-  background-color: #ddd;
-}
-*/
 
 /* Focus */
 .select select:focus {
@@ -200,6 +213,25 @@ label input:checked + .checkbox i {
   }
 }
 
+// Submit button replacement styles
 
+input[type=submit] {
+	display: block;
+	height: 5rem;
+	padding: 0 2rem;
+
+	line-height: 5rem;
+	color: $white;
+
+	border: none;
+	background-color: $dark-grey;
+
+	@include font-size($ft-7);
+
+		@include hover-state {
+			background-color: $orange;
+		}
+
+}
 
 
