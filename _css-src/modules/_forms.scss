@@ -103,11 +103,20 @@ label input:checked + .checkbox i span {
 .select {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 100%;
 
   border: 1px solid $mid-grey;
 
   color: $dark-grey;
+
+    @include mq(sm) {
+      width: 75%;
+    }
+
+    @include mq(lg) {
+      width: 50%;
+    }
+    
 }
 
 .select select {

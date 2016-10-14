@@ -25,7 +25,8 @@ select,
 option,
 button,
 textarea {
-    font-family: $primary-font;
+    font-family: $system-font;
+    font-weight: 300;
     color: $dark-grey;
 }
 
@@ -35,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: normal;
+    font-weight: 300;
 }
 
 code {

@@ -3,10 +3,6 @@
 // =================================================
 
 @keyframes arrow-pulse {
-    
-    20% {
-        bottom: 6rem;
-    }
 
     50% {
         bottom: 6rem;
@@ -96,5 +92,6 @@
 }
 
 .post {
-    padding: $gutter 0;
+    min-height: 50vh;
+    padding: $gutter 0 $gutter*2;
 }
