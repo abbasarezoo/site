@@ -1,7 +1,7 @@
 # Site settings
-title: Abbas Arezoo - Designer and Developer
+title: Abbas Arezoo - Web Design & Front-end Development
 email: abbas@abbasarezoo.co.uk
-description: Hello there, I'm Abbas. I design and build websites and applications.
+description: I'm a designer and developer based in Sheffield, UK. I work with a huge range of clients from local start-ups to established global brands. 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.abbasarezoo.com" # the base hostname & protocol for your site
 twitter_username: DesignSheffield
@@ -23,6 +23,6 @@ exclude:
   - _css-src
   - _js-src
   - _img-src
-  - aajekyll.sublime-project
-  - aajekyll.sublime-workspace
+  - aa.sublime-project
+  - aa.sublime-workspace
   - form-info.txt
